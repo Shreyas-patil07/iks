@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Quiz — PingalaBit</title>
+<meta name="description" content="Test your knowledge of Pingala's binary metre system, Chandahsastra algorithms, and Sanskrit prosody with an interactive timed quiz."/>
+<link rel="canonical" href="https://pingalabit.onrender.com/quiz.html"/>
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns%3D%22http%3A//www.w3.org/2000/svg%22 viewBox%3D%220 0 32 32%22%3E%3Crect width%3D%2232%22 height%3D%2232%22 rx%3D%226%22 fill%3D%22%238f4e00%22/%3E%3Ctext x%3D%2250%25%22 y%3D%2272%25%22 dominant-baseline%3D%22middle%22 text-anchor%3D%22middle%22 font-family%3D%22serif%22 font-size%3D%2220%22 font-weight%3D%22700%22 fill%3D%22%23ffffff%22%3EP%3C/text%3E%3C/svg%3E"/>
+<!-- Open Graph / Social sharing -->
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://pingalabit.onrender.com/quiz.html"/>
+<meta property="og:title" content="Quiz — PingalaBit"/>
+<meta property="og:description" content="Test your knowledge of Pingala's binary metre system, Chandahsastra algorithms, and Sanskrit prosody with an interactive timed quiz."/>
+<meta property="og:site_name" content="PingalaBit"/>
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Quiz — PingalaBit"/>
+<meta name="twitter:description" content="Test your knowledge of Pingala's binary metre system, Chandahsastra algorithms, and Sanskrit prosody with an interactive timed quiz."/>
+<!-- Google Fonts: Noto Serif, Inter, JetBrains Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&amp;family=Noto+Serif+Devanagari:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config directly from Design System -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container": "#f0eded",
+            "inverse-surface": "#303030",
+            "tertiary-fixed-dim": "#62d9cb",
+            "on-error-container": "#93000a",
+            "on-error": "#ffffff",
+            "on-secondary": "#ffffff",
+            "secondary-fixed": "#dde1ff",
+            "on-background": "#1b1c1c",
+            "tertiary-fixed": "#81f6e7",
+            "surface-variant": "#e5e2e1",
+            "surface-container-lowest": "#ffffff",
+            "primary-container": "#e8871e",
+            "on-tertiary-fixed": "#00201d",
+            "tertiary": "#006a61",
+            "primary-fixed-dim": "#ffb77a",
+            "outline-variant": "#dbc2b0",
+            "inverse-primary": "#ffb77a",
+            "primary-fixed": "#ffdcc1",
+            "secondary-container": "#b9c3ff",
+            "on-secondary-container": "#454f83",
+            "surface-container-low": "#f6f3f2",
+            "inverse-on-surface": "#f3f0ef",
+            "error": "#ba1a1a",
+            "error-container": "#ffdad6",
+            "on-primary-fixed": "#2e1500",
+            "surface-dim": "#dcd9d9",
+            "surface-bright": "#fcf9f8",
+            "outline": "#887364",
+            "tertiary-container": "#30b1a4",
+            "secondary-fixed-dim": "#b9c3ff",
+            "on-surface-variant": "#554336",
+            "on-secondary-fixed-variant": "#394377",
+            "on-tertiary": "#ffffff",
+            "surface-container-high": "#eae7e7",
+            "surface-tint": "#8f4e00",
+            "on-primary-container": "#542c00",
+            "on-tertiary-fixed-variant": "#005049",
+            "surface": "#fcf9f8",
+            "on-secondary-fixed": "#0a1649",
+            "background": "#fcf9f8",
+            "on-primary-fixed-variant": "#6c3a00",
+            "secondary": "#515b90",
+            "surface-container-highest": "#e5e2e1",
+            "on-surface": "#1b1c1c",
+            "on-tertiary-container": "#003e38",
+            "on-primary": "#ffffff",
+            "primary": "#8f4e00"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-sm": "0.5rem",
+            "gutter": "1.5rem",
+            "space-xs": "0.25rem",
+            "space-lg": "1.5rem",
+            "margin": "2rem",
+            "space-xl": "2.5rem",
+            "space-md": "1rem"
+          },
+          "fontFamily": {
+            "body-lg": ["Inter"],
+            "display-lg-mobile": ["Noto Serif"],
+            "code-lg": ["JetBrains Mono"],
+            "display-md": ["Noto Serif"],
+            "code-md": ["JetBrains Mono"],
+            "label-sm": ["JetBrains Mono"],
+            "body-sm": ["Inter"],
+            "display-md-mobile": ["Noto Serif"],
+            "headline-lg": ["Noto Serif"],
+            "headline-sm": ["Noto Serif"],
+            "display-lg": ["Noto Serif"],
+            "body-md": ["Inter"],
+            "headline-md": ["Noto Serif"],
+            "label-md": ["Inter"],
+            "code-sm": ["JetBrains Mono"]
+          },
+          "fontSize": {
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "code-lg": ["18px", { "lineHeight": "26px", "fontWeight": "500" }],
+            "display-md": ["40px", { "lineHeight": "48px", "fontWeight": "600" }],
+            "code-md": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" }],
+            "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "display-md-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "500" }],
+            "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+            "code-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    /* Manuscript Brutalism Folio Framing */
+    .manuscript-border {
+      border: 1px solid #dbc2b0;
+      box-shadow: inset 0 0 0 2px #fcf9f8, 0 1px 3px rgba(0,0,0,0.03);
+    }
+    .dark .manuscript-border {
+      border: 1px solid #303030;
+      box-shadow: inset 0 0 0 2px #1b1c1c, 0 1px 3px rgba(0,0,0,0.2);
+    }
+    /* Syllable tiles crisp rendering */
+    .tile-laghu {
+      background-color: #e8871e;
+      color: #ffffff;
+      border: 1px solid #8f4e00;
+      box-shadow: 2px 2px 0px rgba(84, 44, 0, 0.25);
+    }
+    .tile-guru {
+      background-color: #1f2a5c;
+      color: #fcf9f8;
+      border: 1px solid #0a1649;
+      box-shadow: 2px 2px 0px rgba(10, 22, 73, 0.3);
+    }
+    /* Subtle scanline palm-leaf texture hint */
+    .palm-line {
+      background-image: repeating-linear-gradient(0deg, transparent, transparent 31px, rgba(136, 115, 100, 0.08) 31px, rgba(136, 115, 100, 0.08) 32px);
+    }
+  </style>
+</head>
+
+</head>
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-primary-fixed selection:text-on-primary-fixed palm-line min-h-screen flex flex-col">
+<header class="bg-surface/90 dark:bg-surface-container-lowest/90 backdrop-blur-md docked full-width top-0 sticky z-50 border-b border-outline-variant/40 dark:border-outline/30">
+<div class="w-full max-w-7xl mx-auto px-space-lg md:px-margin flex items-center justify-between h-16">
+<a class="flex items-center gap-space-sm group" href="index.html">
+<div class="flex items-center gap-1">
+<span class="w-4 h-6 rounded bg-primary-container border border-on-primary-container/30 flex items-center justify-center text-[10px] font-code-sm font-bold text-white shadow-sm">1</span>
+<span class="w-7 h-6 rounded bg-secondary border border-on-secondary-fixed/40 flex items-center justify-center text-[10px] font-code-sm font-bold text-surface shadow-sm">0</span>
+</div>
+<span class="text-headline-sm font-headline-sm font-bold tracking-tight text-primary dark:text-primary-fixed">PingalaBit</span>
+<span class="hidden lg:inline text-label-sm font-label-sm text-outline px-1.5 py-0.5 rounded bg-surface-container-low border border-outline-variant/40">IKS-06</span>
+</a>
+<nav class="hidden md:flex items-center gap-5 text-label-md font-label-md">
+<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-primary-fixed transition-colors" href="index.html">Home</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-primary-fixed transition-colors" href="learn.html">Explore & Solve</a>
+<a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary dark:border-primary-fixed pb-1" href="quiz.html">Quiz</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-primary-fixed transition-colors" href="course.html">Guided Course</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-primary-fixed transition-colors" href="about.html">About & Team</a>
+</nav>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded hover:bg-surface-container dark:hover:bg-surface-container-high transition-colors active:scale-95 text-on-surface-variant flex items-center justify-center" id="audioMuteBtn" title="Toggle Synthesizer Sound">
+<span class="material-symbols-outlined text-xl" id="audioMuteIcon">volume_up</span>
+</button>
+<button class="p-2 rounded hover:bg-surface-container dark:hover:bg-surface-container-high transition-colors active:scale-95 text-on-surface-variant flex items-center justify-center" id="themeToggleBtn" title="Toggle Light/Dark Display">
+<span class="material-symbols-outlined text-xl" id="themeToggleIcon">dark_mode</span>
+</button>
+<button class="md:hidden p-2 rounded hover:bg-surface-container text-on-surface-variant" id="mobileMenuBtn">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+</div>
+</div>
+<div class="hidden md:hidden border-t border-outline-variant/30 bg-surface px-space-lg py-space-md flex-col gap-3" id="mobileDrawer">
+<a class="py-2 text-label-md font-label-md text-on-surface-variant hover:text-primary" href="index.html">Home</a>
+<a class="py-2 text-label-md font-label-md text-on-surface-variant hover:text-primary" href="learn.html">Explore & Solve</a>
+<a class="py-2 text-label-md font-label-md text-primary font-bold" href="quiz.html">Quiz</a>
+<a class="py-2 text-label-md font-label-md text-on-surface-variant hover:text-primary" href="course.html">Guided Course</a>
+<a class="py-2 text-label-md font-label-md text-on-surface-variant hover:text-primary" href="about.html">About & Team</a>
+</div>
+</header>
+<main class="flex-grow w-full max-w-7xl mx-auto px-space-lg md:px-margin py-space-lg flex flex-col gap-space-xl">
+<section class="manuscript-border rounded bg-surface-container-lowest p-space-lg md:p-space-xl flex flex-col gap-space-lg" id="quiz">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pb-space-sm border-b border-outline-variant/50">
+<div>
+<span class="text-label-sm font-label-sm text-primary uppercase tracking-widest">Mastery Assessment</span>
+<h2 class="text-headline-lg font-headline-lg text-on-background">PingalaBit Interactive Knowledge Check</h2>
+<p class="text-body-md font-body-md text-on-surface-variant">
+            10 rigorous multiple choice questions testing your grasp of Vedic prosody, binary matrices, and algorithmic history.
+          </p>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-code-sm font-code-sm bg-surface-container-low px-3 py-1.5 rounded border border-outline-variant font-bold text-on-surface" id="quizScoreTracker">Score: 0 / 10</span>
+</div>
+</div>
+<!-- Quiz Active Card Container -->
+<div class="p-space-lg rounded bg-surface-container-low border border-outline-variant flex flex-col gap-space-md" id="quizQuestionCard">
+<!-- Question Meta -->
+<div class="flex items-center justify-between">
+<span class="text-label-sm font-label-sm text-primary font-bold" id="quizProgress">Question 1 of 10</span>
+<span class="text-label-sm font-label-sm text-outline" id="quizCategory">Category: Vedic Metrology</span>
+</div>
+<!-- Question Prompt -->
+<h3 class="text-headline-sm font-headline-sm font-bold text-on-surface" id="quizQuestionText">
+          In Piṅgala's Chandaḥśāstra, what numerical place-value corresponds to the syllable 'Laghu' (L)?
+        </h3>
+<!-- Options Container -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-3" id="quizOptionsContainer">
+<!-- Dynamically populated options -->
+</div>
+<!-- Explanation Callout (Hidden until answered) -->
+<div class="hidden p-space-md rounded bg-surface-container-lowest border border-outline-variant text-body-sm font-body-sm flex flex-col gap-1" id="quizExplanationBox">
+<span class="font-bold" id="quizFeedbackStatus">Correct!</span>
+<p class="text-on-surface-variant" id="quizFeedbackExplanation"></p>
+</div>
+<!-- Next / Action Button -->
+<div class="flex justify-end pt-2">
+<button class="hidden px-5 py-2 rounded bg-primary text-white hover:bg-primary/90 font-label-md text-label-md active:scale-95 shadow-sm" id="quizNextBtn">
+            Next Question →
+          </button>
+</div>
+</div>
+<!-- Quiz Completed Screen (Hidden by default) -->
+<div class="hidden p-space-xl rounded bg-surface-container-low border border-outline-variant text-center flex flex-col items-center gap-space-md" id="quizFinishedCard">
+<span class="material-symbols-outlined text-6xl text-primary">verified</span>
+<h3 class="text-headline-md font-headline-md font-bold text-on-surface" id="quizFinalTitle">Evaluation Completed</h3>
+<p class="text-headline-lg font-code-lg font-bold text-secondary" id="quizFinalScore">You scored 10 / 10 (100%)</p>
+<div class="px-4 py-2 rounded bg-primary-fixed text-on-primary-fixed font-headline-sm font-bold border border-primary/20" id="quizBadgeTitle">
+          Chandaḥ-Śāstrī (Master of Vedic Binary)
+        </div>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-xl" id="quizBadgeDesc">
+          Phenomenal work! You have thoroughly grasped the deep bridge between ancient Indian prosody and modern computer architecture.
+        </p>
+<button class="mt-2 px-6 py-2.5 rounded bg-primary text-white hover:bg-primary/90 font-label-md text-label-md active:scale-95 shadow-sm" id="retakeQuizBtn">
+          Retake Quiz
+        </button>
+</div>
+</section>
+
+</main>
+<footer class="bg-surface-container-low dark:bg-inverse-surface border-t border-outline-variant/50 dark:border-outline/30 mt-space-xl">
+<div class="w-full max-w-7xl mx-auto px-space-lg md:px-margin py-space-xl flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex flex-col items-center md:items-start gap-1">
+<div class="text-headline-md font-headline-md font-bold text-primary dark:text-primary-fixed">PingalaBit</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant dark:text-inverse-on-surface/80 text-center md:text-left">
+  © 2025 PingalaBit. IKS Assignment No. 6. Computational Prosody &amp; Binary Mathematics.
+</p>
+<span class="text-code-sm font-code-sm text-outline">Home · Explore &amp; Solve · Quiz · Guided Course · About &amp; Team</span>
+</div>
+<div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-label-sm font-label-sm">
+<a class="text-on-surface-variant dark:text-inverse-on-surface/80 hover:text-primary dark:hover:text-primary-fixed transition-colors" href="about.html#timeline">Chandaḥśāstra Sources</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface/80 hover:text-primary dark:hover:text-primary-fixed transition-colors" href="learn.html#meru">Halayudha Mṛtasañjīvinī</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface/80 hover:text-primary dark:hover:text-primary-fixed transition-colors" href="about.html#glossary">Glossary &amp; IAST</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface/80 hover:text-primary dark:hover:text-primary-fixed transition-colors" href="about.html#roster">Team Roster</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface/80 hover:text-primary dark:hover:text-primary-fixed transition-colors" href="learn.html#solvers">Algorithmic Proofs</a>
+</div>
+</div>
+</footer>
+
+<script>
+    // --- 1. Sound Synthesis Engine (Web Audio API) ---
+    class ProsodyAudioEngine {
+      constructor() {
+        this.ctx = null;
+        this.isMuted = false;
+        this.volume = 0.75;
+      }
+
+      initContext() {
+        if (!this.ctx) {
+          const AudioContext = window.AudioContext || window.webkitAudioContext;
+          if (AudioContext) {
+            this.ctx = new AudioContext();
+          }
+        }
+        if (this.ctx && this.ctx.state === 'suspended') {
+          this.ctx.resume();
+        }
+      }
+
+      // Laghu: High crisp tone (880Hz, ~80ms)
+      // Guru: Deep resonant harmonic tone (440Hz, ~240ms)
+      playTone(type = 'L', customDuration = null) {
+        if (this.isMuted) return;
+        this.initContext();
+        if (!this.ctx) return;
+
+        const now = this.ctx.currentTime;
+        const osc = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
+
+        const isLaghu = (type === 'L' || type === '1');
+        const freq = isLaghu ? 880 : 440;
+        const duration = customDuration !== null ? customDuration : (isLaghu ? 0.09 : 0.24);
+
+        osc.type = isLaghu ? 'triangle' : 'sine';
+        osc.frequency.setValueAtTime(freq, now);
+
+        gain.gain.setValueAtTime(this.volume * 0.4, now);
+        gain.gain.exponentialRampToValueAtTime(0.0001, now + duration);
+
+        osc.connect(gain);
+        gain.connect(this.ctx.destination);
+
+        osc.start(now);
+        osc.stop(now + duration);
+      }
+
+      async playSequence(sequence, bpm = 140, onStep = null) {
+        this.initContext();
+        const beatUnitSec = 60 / bpm;
+
+        for (let i = 0; i < sequence.length; i++) {
+          const item = sequence[i];
+          if (onStep) onStep(i, item);
+          const isL = (item === 'L' || item === '1');
+          const duration = isL ? (beatUnitSec * 0.6) : (beatUnitSec * 1.3);
+          this.playTone(isL ? 'L' : 'G', duration);
+          await new Promise(r => setTimeout(r, (isL ? beatUnitSec * 0.8 : beatUnitSec * 1.5) * 1000));
+        }
+        if (onStep) onStep(-1, null);
+      }
+    }
+
+    const soundEngine = new ProsodyAudioEngine();
+
+
+    // --- 2. Theme & Sound UI Toggles ---
+    const themeToggleBtn = document.getElementById('themeToggleBtn');
+    const themeToggleIcon = document.getElementById('themeToggleIcon');
+
+    themeToggleBtn.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      const isDark = document.documentElement.classList.contains('dark');
+      themeToggleIcon.textContent = isDark ? 'light_mode' : 'dark_mode';
+    });
+
+    const audioMuteBtn = document.getElementById('audioMuteBtn');
+    const audioMuteIcon = document.getElementById('audioMuteIcon');
+
+    audioMuteBtn.addEventListener('click', () => {
+      soundEngine.isMuted = !soundEngine.isMuted;
+      audioMuteIcon.textContent = soundEngine.isMuted ? 'volume_off' : 'volume_up';
+      audioMuteBtn.classList.toggle('text-error', soundEngine.isMuted);
+    });
+
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileDrawer.classList.toggle('hidden');
+      mobileDrawer.classList.toggle('flex');
+    });
+
+
+    // --- 10. Section 11: 10-Question Rigorous Quiz ---
+    const quizQuestions = [
+      {
+        q: "In Ācārya Piṅgala's Chandaḥśāstra, how is a short syllable (Laghu) numerically mapped in the binary row calculation?",
+        category: "Foundations",
+        options: [
+          "Laghu is mapped to 0",
+          "Laghu is mapped to 1 with duration of 1 mātrā",
+          "Laghu is mapped to 2",
+          "Laghu has undefined numeric value"
+        ],
+        correct: 1,
+        exp: "Laghu (light/short) corresponds to 1 mātrā and contributes 2ⁱ to the row summation index, directly acting as binary 1."
+      },
+      {
+        q: "How does Piṅgala's bit significance order compare to modern big-endian computer architecture?",
+        category: "Comparative Computer Science",
+        options: [
+          "They are identical: first syllable is most significant",
+          "Piṅgala uses LSB-first: the first syllable represents 2⁰, whereas big-endian places MSB first",
+          "Piṅgala assigns negative powers of two",
+          "Modern computing does not use bit significance"
+        ],
+        correct: 1,
+        exp: "In Prastāra generation, the first syllable alternates every row (2⁰=1), the second every 2 rows (2¹=2), meaning the first syllable is the Least Significant Bit."
+      },
+      {
+        q: "What is the canonical order of all 8 permutations of a 3-syllable meter in Piṅgala's Prastāra?",
+        category: "Combinatorics",
+        options: [
+          "LLL, LLG, LGL, LGG, GLL, GLG, GGL, GGG",
+          "GGG, LGG, GLG, LLG, GGL, LGL, GLL, LLL",
+          "GLG, LGL, GGG, LLL, LLG, GGL, GLL, LGG",
+          "GGG, GGL, GLG, GLL, LGG, LGL, LLG, LLL"
+        ],
+        correct: 1,
+        exp: "Canonical Pingala ordering begins with all Guru (GGG = Row 1), then increments place values: LGG (Row 2), GLG (Row 3), ..., up to LLL (Row 8)."
+      },
+      {
+        q: "Which algorithm resolves the 'Naṣṭa' (The Lost) problem?",
+        category: "Algorithms",
+        options: [
+          "Sorting an array using bubble sort",
+          "Determining the exact syllable meter given only its row position number",
+          "Calculating the total volume of Mount Meru",
+          "Converting decimal integers to base 10 fractions"
+        ],
+        correct: 1,
+        exp: "Naṣṭa ('The Lost') takes a row index R and finds the exact original meter via successive halving and parity testing, identical to integer-to-binary bit shifting."
+      },
+      {
+        q: "The Uddiṣṭa algorithm computes which of the following?",
+        category: "Algorithms",
+        options: [
+          "The tempo in BPM of a recitation",
+          "The row index in the Prastāra table corresponding to an indicated pattern of Laghu and Guru",
+          "The acoustic resonance of a bronze bell",
+          "The number of consonants in a Sanskrit verse"
+        ],
+        correct: 1,
+        exp: "Uddiṣṭa ('The Indicated') calculates Row = 1 + ∑ 2ⁱ for every position i where a Laghu syllable occurs."
+      },
+      {
+        q: "Halāyudha's 10th-century commentary 'Mṛtasañjīvinī' diagrammed which famous combinatorial structure?",
+        category: "Mathematics History",
+        options: [
+          "Euclidean Algorithm for greatest common divisor",
+          "Meru-prastāra, historically identical to Pascal's Triangle for binomial coefficients",
+          "Fourier Transform matrices",
+          "Turing machine tape representations"
+        ],
+        correct: 1,
+        exp: "Halāyudha's Meru-prastāra (Mount Meru pyramid) diagrams binomial coefficients nCr over 600 years before Blaise Pascal."
+      },
+      {
+        q: "How did Indian prosodists like Virahāṅka and Hemacandra discover the Fibonacci numbers before Leonardo of Pisa?",
+        category: "Mātrā Metrology",
+        options: [
+          "By counting pairs of rabbits breeding in fields",
+          "By calculating the number of meters with total moraic beat duration M (Laghu=1 beat, Guru=2 beats)",
+          "By dividing gold bar weights",
+          "By measuring the orbital period of Saturn"
+        ],
+        correct: 1,
+        exp: "Enumerating meters by total duration M where Laghu=1 and Guru=2 gives recurrence S(M) = S(M-1) + S(M-2), generating the Fibonacci sequence 1, 2, 3, 5, 8, 13..."
+      },
+      {
+        q: "What is the total permutation count (Saṅkhyā) for a Sanskrit meter containing n syllables?",
+        category: "Combinatorics",
+        options: [
+          "n!",
+          "n²",
+          "2ⁿ",
+          "2n + 1"
+        ],
+        correct: 2,
+        exp: "Since each position has exactly 2 states (Laghu or Guru), the total permutations for length n is strictly 2ⁿ."
+      },
+      {
+        q: "Which European philosopher and mathematician explicitly acknowledged the beauty of binary numbers in 1703?",
+        category: "Modern Binary History",
+        options: [
+          "Gottfried Wilhelm Leibniz",
+          "René Descartes",
+          "Isaac Newton",
+          "Francis Bacon"
+        ],
+        correct: 0,
+        exp: "Leibniz published 'Explication de l'Arithmétique Binaire' in 1703, formalizing modern western binary notation."
+      },
+      {
+        q: "Who demonstrated in 1937 that electrical relays and switches could execute Boolean algebra?",
+        category: "Information Age",
+        options: [
+          "Alan Turing",
+          "Claude Shannon",
+          "John von Neumann",
+          "Ada Lovelace"
+        ],
+        correct: 1,
+        exp: "Claude Shannon's master's thesis proved that electric switches can implement Boolean logic, founding digital circuit engineering."
+      }
+    ];
+
+    let currentQuizIndex = 0;
+    let quizScore = 0;
+
+    const quizProgress = document.getElementById('quizProgress');
+    const quizCategory = document.getElementById('quizCategory');
+    const quizQuestionText = document.getElementById('quizQuestionText');
+    const quizOptionsContainer = document.getElementById('quizOptionsContainer');
+    const quizExplanationBox = document.getElementById('quizExplanationBox');
+    const quizFeedbackStatus = document.getElementById('quizFeedbackStatus');
+    const quizFeedbackExplanation = document.getElementById('quizFeedbackExplanation');
+    const quizNextBtn = document.getElementById('quizNextBtn');
+    const quizScoreTracker = document.getElementById('quizScoreTracker');
+
+    const quizQuestionCard = document.getElementById('quizQuestionCard');
+    const quizFinishedCard = document.getElementById('quizFinishedCard');
+    const quizFinalScore = document.getElementById('quizFinalScore');
+    const quizBadgeTitle = document.getElementById('quizBadgeTitle');
+    const quizBadgeDesc = document.getElementById('quizBadgeDesc');
+    const retakeQuizBtn = document.getElementById('retakeQuizBtn');
+
+    function loadQuestion(idx) {
+      const q = quizQuestions[idx];
+      quizProgress.textContent = `Question ${idx + 1} of ${quizQuestions.length}`;
+      quizCategory.textContent = `Category: ${q.category}`;
+      quizQuestionText.textContent = q.q;
+
+      quizOptionsContainer.innerHTML = '';
+      quizExplanationBox.classList.add('hidden');
+      quizNextBtn.classList.add('hidden');
+
+      q.options.forEach((opt, optIdx) => {
+        const btn = document.createElement('button');
+        btn.className = 'p-space-md text-left rounded bg-surface-container-lowest border border-outline-variant hover:border-primary text-body-sm font-body-sm text-on-surface transition-all active:scale-98 shadow-sm flex items-start gap-2';
+        btn.innerHTML = `<span class="font-bold text-primary font-code-sm">${String.fromCharCode(65 + optIdx)}.</span> <span>${opt}</span>`;
+        
+        btn.addEventListener('click', () => handleOptionClick(optIdx, btn));
+        quizOptionsContainer.appendChild(btn);
+      });
+    }
+
+    function handleOptionClick(selectedIdx, selectedBtn) {
+      const q = quizQuestions[currentQuizIndex];
+      const buttons = quizOptionsContainer.querySelectorAll('button');
+      buttons.forEach(b => b.disabled = true);
+
+      const isCorrect = (selectedIdx === q.correct);
+      if (isCorrect) {
+        quizScore++;
+        soundEngine.playTone('L');
+        selectedBtn.classList.add('bg-tertiary-fixed/30', 'border-tertiary', 'font-bold');
+        quizFeedbackStatus.textContent = 'Correct!';
+        quizFeedbackStatus.className = 'font-bold text-tertiary';
+      } else {
+        soundEngine.playTone('G');
+        selectedBtn.classList.add('bg-error-container/40', 'border-error');
+        buttons[q.correct].classList.add('bg-tertiary-fixed/30', 'border-tertiary', 'font-bold');
+        quizFeedbackStatus.textContent = 'Incorrect';
+        quizFeedbackStatus.className = 'font-bold text-error';
+      }
+
+      quizScoreTracker.textContent = `Score: ${quizScore} / ${quizQuestions.length}`;
+      quizFeedbackExplanation.textContent = q.exp;
+      quizExplanationBox.classList.remove('hidden');
+      quizNextBtn.classList.remove('hidden');
+    }
+
+    quizNextBtn.addEventListener('click', () => {
+      currentQuizIndex++;
+      if (currentQuizIndex < quizQuestions.length) {
+        loadQuestion(currentQuizIndex);
+      } else {
+        showQuizResults();
+      }
+    });
+
+    function showQuizResults() {
+      quizQuestionCard.classList.add('hidden');
+      quizFinishedCard.classList.remove('hidden');
+
+      const pct = Math.round((quizScore / quizQuestions.length) * 100);
+      quizFinalScore.textContent = `You scored ${quizScore} / ${quizQuestions.length} (${pct}%)`;
+
+      if (quizScore >= 9) {
+        quizBadgeTitle.textContent = 'Chandaḥ-Śāstrī (Master of Vedic Binary)';
+        quizBadgeDesc.textContent = 'Outstanding excellence! You have mastered the intricate bridges between Pingala’s sūtras, combinatorics, and modern binary logic.';
+      } else if (quizScore >= 6) {
+        quizBadgeTitle.textContent = 'Pingala Scholar';
+        quizBadgeDesc.textContent = 'Well done! You possess a solid foundational command of classical prosodic algorithms and binary architecture.';
+      } else {
+        quizBadgeTitle.textContent = 'Curious Explorer';
+        quizBadgeDesc.textContent = 'Good start! Review the interactive Prastāra matrix and dual solvers, then test your skills once more.';
+      }
+    }
+
+    retakeQuizBtn.addEventListener('click', () => {
+      currentQuizIndex = 0;
+      quizScore = 0;
+      quizScoreTracker.textContent = `Score: 0 / ${quizQuestions.length}`;
+      quizFinishedCard.classList.add('hidden');
+      quizQuestionCard.classList.remove('hidden');
+      loadQuestion(0);
+    });
+
+    loadQuestion(0);
+
+</script>
+
+</body></html>

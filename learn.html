@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Explore & Solve — PingalaBit</title>
+<meta name="description" content="Interactive Prastara, Nashta, Uddishta, and Meru-prastara labs. Solve binary-prosody problems step by step with Pingala's six pratyayas."/>
+<link rel="canonical" href="https://pingalabit.onrender.com/learn.html"/>
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns%3D%22http%3A//www.w3.org/2000/svg%22 viewBox%3D%220 0 32 32%22%3E%3Crect width%3D%2232%22 height%3D%2232%22 rx%3D%226%22 fill%3D%22%238f4e00%22/%3E%3Ctext x%3D%2250%25%22 y%3D%2272%25%22 dominant-baseline%3D%22middle%22 text-anchor%3D%22middle%22 font-family%3D%22serif%22 font-size%3D%2220%22 font-weight%3D%22700%22 fill%3D%22%23ffffff%22%3EP%3C/text%3E%3C/svg%3E"/>
+<!-- Open Graph / Social sharing -->
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://pingalabit.onrender.com/learn.html"/>
+<meta property="og:title" content="Explore & Solve — PingalaBit"/>
+<meta property="og:description" content="Interactive Prastara, Nashta, Uddishta, and Meru-prastara labs. Solve binary-prosody problems step by step with Pingala's six pratyayas."/>
+<meta property="og:site_name" content="PingalaBit"/>
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Explore & Solve — PingalaBit"/>
+<meta name="twitter:description" content="Interactive Prastara, Nashta, Uddishta, and Meru-prastara labs. Solve binary-prosody problems step by step with Pingala's six pratyayas."/>
+<!-- Google Fonts: Noto Serif, Inter, JetBrains Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&amp;family=Noto+Serif+Devanagari:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config directly from Design System -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container": "#f0eded",
+            "inverse-surface": "#303030",
+            "tertiary-fixed-dim": "#62d9cb",
+            "on-error-container": "#93000a",
+            "on-error": "#ffffff",
+            "on-secondary": "#ffffff",
+            "secondary-fixed": "#dde1ff",
+            "on-background": "#1b1c1c",
+            "tertiary-fixed": "#81f6e7",
+            "surface-variant": "#e5e2e1",
+            "surface-container-lowest": "#ffffff",
+            "primary-container": "#e8871e",
+            "on-tertiary-fixed": "#00201d",
+            "tertiary": "#006a61",
+            "primary-fixed-dim": "#ffb77a",
+            "outline-variant": "#dbc2b0",
+            "inverse-primary": "#ffb77a",
+            "primary-fixed": "#ffdcc1",
+            "secondary-container": "#b9c3ff",
+            "on-secondary-container": "#454f83",
+            "surface-container-low": "#f6f3f2",
+            "inverse-on-surface": "#f3f0ef",
+            "error": "#ba1a1a",
+            "error-container": "#ffdad6",
+            "on-primary-fixed": "#2e1500",
+            "surface-dim": "#dcd9d9",
+            "surface-bright": "#fcf9f8",
+            "outline": "#887364",
+            "tertiary-container": "#30b1a4",
+            "secondary-fixed-dim": "#b9c3ff",
+            "on-surface-variant": "#554336",
+            "on-secondary-fixed-variant": "#394377",
+            "on-tertiary": "#ffffff",
+            "surface-container-high": "#eae7e7",
+            "surface-tint": "#8f4e00",
+            "on-primary-container": "#542c00",
+            "on-tertiary-fixed-variant": "#005049",
+            "surface": "#fcf9f8",
+            "on-secondary-fixed": "#0a1649",
+            "background": "#fcf9f8",
+            "on-primary-fixed-variant": "#6c3a00",
+            "secondary": "#515b90",
+            "surface-container-highest": "#e5e2e1",
+            "on-surface": "#1b1c1c",
+            "on-tertiary-container": "#003e38",
+            "on-primary": "#ffffff",
+            "primary": "#8f4e00"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-sm": "0.5rem",
+            "gutter": "1.5rem",
+            "space-xs": "0.25rem",
+            "space-lg": "1.5rem",
+            "margin": "2rem",
+            "space-xl": "2.5rem",
+            "space-md": "1rem"
+          },
+          "fontFamily": {
+            "body-lg": ["Inter"],
+            "display-lg-mobile": ["Noto Serif"],
+            "code-lg": ["JetBrains Mono"],
+            "display-md": ["Noto Serif"],
+            "code-md": ["JetBrains Mono"],
+            "label-sm": ["JetBrains Mono"],
+            "body-sm": ["Inter"],
+            "display-md-mobile": ["Noto Serif"],
+            "headline-lg": ["Noto Serif"],
+            "headline-sm": ["Noto Serif"],
+            "display-lg": ["Noto Serif"],
+            "body-md": ["Inter"],
+            "headline-md": ["Noto Serif"],
+            "label-md": ["Inter"],
+            "code-sm": ["JetBrains Mono"]
+          },
+          "fontSize": {
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "code-lg": ["18px", { "lineHeight": "26px", "fontWeight": "500" }],
+            "display-md": ["40px", { "lineHeight": "48px", "fontWeight": "600" }],
+            "code-md": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" }],
+            "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "display-md-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "500" }],
+            "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+            "code-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    /* Manuscript Brutalism Folio Framing */
+    .manuscript-border {
+      border: 1px solid #dbc2b0;
+      box-shadow: inset 0 0 0 2px #fcf9f8, 0 1px 3px rgba(0,0,0,0.03);
+    }
+    .dark .manuscript-border {
+      border: 1px solid #303030;
+      box-shadow: inset 0 0 0 2px #1b1c1c, 0 1px 3px rgba(0,0,0,0.2);
+    }
+    /* Syllable tiles crisp rendering */
+    .tile-laghu {
+      background-color: #e8871e;
+      color: #ffffff;
+      border: 1px solid #8f4e00;
+      box-shadow: 2px 2px 0px rgba(84, 44, 0, 0.25);
+    }
+    .tile-guru {
+      background-color: #1f2a5c;
+      color: #fcf9f8;
+      border: 1px solid #0a1649;
+      box-shadow: 2px 2px 0px rgba(10, 22, 73, 0.3);
+    }
+    /* Subtle scanline palm-leaf texture hint */
+    .palm-line {
+      background-image: repeating-linear-gradient(0deg, transparent, transparent 31px, rgba(136, 115, 100, 0.08) 31px, rgba(136, 115, 100, 0.08) 32px);
+    }
+  </style>
+</head>
+
+</head>
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-primary-fixed selection:text-on-primary-fixed palm-line min-h-screen flex flex-col">
+<header class="bg-surface/90 dark:bg-surface-container-lowest/90 backdrop-blur-md docked full-width top-0 sticky z-50 border-b border-outline-variant/40 dark:border-outline/30">
+<div class="w-full max-w-7xl mx-auto px-space-lg md:px-margin flex items-center justify-between h-16">
+<a class="flex items-center gap-space-sm group" href="index.html">
+<div class="flex items-center gap-1">
+<span class="w-4 h-6 rounded bg-primary-container border border-on-primary-container/30 flex items-center justify-center text-[10px] font-code-sm font-bold text-white shadow-sm">1</span>
+<span class="w-7 h-6 rounded bg-secondary border border-on-secondary-fixed/40 flex items-center justify-center text-[10px] font-code-sm font-bold text-surface shadow-sm">0</span>
+</div>
+<span class="text-headline-sm font-headline-sm font-bold tracking-tight text-primary dark:text-primary-fixed">PingalaBit</span>
+<span class="hidden lg:inline text-label-sm font-label-sm text-outline px-1.5 py-0.5 rounded bg-surface-container-low border border-outline-variant/40">IKS-06</span>
+</a>
+<nav class="hidden md:flex items-center gap-5 text-label-md font-label-md">
+<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-primary-fixed transition-colors" href="index.html">Home</a>
+<a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary dark:border-primary-fixed pb-1" href="learn.html">Explore & Solve</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-primary-fixed transition-colors" href="quiz.html">Quiz</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-primary-fixed transition-colors" href="course.html">Guided Course</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-primary-fixed transition-colors" href="about.html">About & Team</a>
+</nav>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded hover:bg-surface-container dark:hover:bg-surface-container-high transition-colors active:scale-95 text-on-surface-variant flex items-center justify-center" id="audioMuteBtn" title="Toggle Synthesizer Sound">
+<span class="material-symbols-outlined text-xl" id="audioMuteIcon">volume_up</span>
+</button>
+<button class="p-2 rounded hover:bg-surface-container dark:hover:bg-surface-container-high transition-colors active:scale-95 text-on-surface-variant flex items-center justify-center" id="themeToggleBtn" title="Toggle Light/Dark Display">
+<span class="material-symbols-outlined text-xl" id="themeToggleIcon">dark_mode</span>
+</button>
+<button class="md:hidden p-2 rounded hover:bg-surface-container text-on-surface-variant" id="mobileMenuBtn">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+</div>
+</div>
+<div class="hidden md:hidden border-t border-outline-variant/30 bg-surface px-space-lg py-space-md flex-col gap-3" id="mobileDrawer">
+<a class="py-2 text-label-md font-label-md text-on-surface-variant hover:text-primary" href="index.html">Home</a>
+<a class="py-2 text-label-md font-label-md text-primary font-bold" href="learn.html">Explore & Solve</a>
+<a class="py-2 text-label-md font-label-md text-on-surface-variant hover:text-primary" href="quiz.html">Quiz</a>
+<a class="py-2 text-label-md font-label-md text-on-surface-variant hover:text-primary" href="course.html">Guided Course</a>
+<a class="py-2 text-label-md font-label-md text-on-surface-variant hover:text-primary" href="about.html">About & Team</a>
+</div>
+</header>
+<main class="flex-grow w-full max-w-7xl mx-auto px-space-lg md:px-margin py-space-lg flex flex-col gap-space-xl">
+<section class="manuscript-border rounded bg-surface-container-lowest p-space-lg md:p-space-xl flex flex-col gap-space-lg" id="playground">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pb-space-sm border-b border-outline-variant/50">
+<div>
+<span class="text-label-sm font-label-sm text-primary uppercase tracking-widest">Interactive Lab</span>
+<h2 class="text-headline-lg font-headline-lg text-on-background">Laghu-Guru Syllable Playground</h2>
+<p class="text-body-md font-body-md text-on-surface-variant">
+            Compose your own metric pattern. Click any syllable tile to toggle between <strong>Laghu</strong> (short, 1 unit) and <strong>Guru</strong> (long, 2 units).
+          </p>
+</div>
+<!-- Length Selector (1 to 8 syllables) -->
+<div class="flex items-center gap-2 bg-surface-container-low p-1.5 rounded border border-outline-variant">
+<label class="text-label-sm font-label-sm text-on-surface-variant" for="syllableCount">Syllables (n):</label>
+<select class="bg-surface-container-lowest text-on-surface font-code-sm text-code-sm rounded border border-outline-variant py-1 px-2 focus:ring-1 focus:ring-primary focus:outline-none" id="syllableCount">
+<option value="1">1 syllable (2¹ = 2)</option>
+<option value="2">2 syllables (2² = 4)</option>
+<option value="3">3 syllables (2³ = 8)</option>
+<option selected="" value="4">4 syllables (2⁴ = 16)</option>
+<option value="5">5 syllables (2⁵ = 32)</option>
+<option value="6">6 syllables (2⁶ = 64)</option>
+<option value="7">7 syllables (2⁷ = 128)</option>
+<option value="8">8 syllables (2⁸ = 256)</option>
+</select>
+</div>
+</div>
+<!-- Live Clickable Interactive Tile Strip -->
+<div class="flex flex-col items-center justify-center p-space-lg bg-surface-container-low rounded border border-outline-variant/60 gap-4">
+<div class="text-label-sm font-label-sm text-outline">Click any tile below to toggle state</div>
+<div class="flex flex-wrap items-center justify-center gap-3" id="interactiveTileContainer">
+<!-- Dynamically populated by JavaScript -->
+</div>
+<!-- Audio Rhythm Playback Button -->
+<button class="mt-2 px-5 py-2 rounded bg-tertiary text-on-tertiary hover:bg-tertiary/90 transition-all font-label-md text-label-md flex items-center gap-2 shadow-sm active:scale-95" id="playPlaygroundRhythmBtn">
+<span class="material-symbols-outlined text-base">play_arrow</span>
+<span>Play Prosody Rhythm</span>
+</button>
+</div>
+<!-- Live Analytics Dashboard Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Metric Pattern -->
+<div class="p-space-md rounded bg-surface-container-low border border-outline-variant">
+<span class="text-label-sm font-label-sm text-outline block mb-1">Metric Pattern</span>
+<div class="text-headline-sm font-code-lg font-bold text-primary" id="pgPattern">L G L L</div>
+<span class="text-body-sm font-body-sm text-on-surface-variant mt-1 block">Left-to-right prosody</span>
+</div>
+<!-- Binary Array -->
+<div class="p-space-md rounded bg-surface-container-low border border-outline-variant">
+<span class="text-label-sm font-label-sm text-outline block mb-1">Modern Binary Bitstream</span>
+<div class="text-headline-sm font-code-lg font-bold text-secondary" id="pgBinary">1 0 1 1</div>
+<span class="text-body-sm font-body-sm text-on-surface-variant mt-1 block">L = 1, G = 0</span>
+</div>
+<!-- Pingala Decimal Row -->
+<div class="p-space-md rounded bg-surface-container-low border border-outline-variant">
+<span class="text-label-sm font-label-sm text-outline block mb-1">Pingala Row (Uddiṣṭa)</span>
+<div class="text-headline-sm font-code-lg font-bold text-tertiary" id="pgRow">Row #14</div>
+<span class="text-body-sm font-body-sm text-on-surface-variant mt-1 block">1 + ∑ 2ⁱ for each L</span>
+</div>
+<!-- Total Permutations -->
+<div class="p-space-md rounded bg-surface-container-low border border-outline-variant">
+<span class="text-label-sm font-label-sm text-outline block mb-1">Total Permutations (Saṅkhyā)</span>
+<div class="text-headline-sm font-code-lg font-bold text-on-surface" id="pgTotal">2⁴ = 16</div>
+<span class="text-body-sm font-body-sm text-on-surface-variant mt-1 block">Possible meters</span>
+</div>
+</div>
+<!-- Place Values Breakdown Math Trace -->
+<div class="p-space-md rounded bg-surface-container-lowest border border-outline-variant font-code-sm text-code-sm text-on-surface-variant flex flex-col gap-1">
+<span class="font-bold text-on-surface">Mathematical Positional Place-Value Trace (LSB First):</span>
+<div class="leading-relaxed" id="pgTraceMath">
+<!-- Dynamic Math Output -->
+</div>
+</div>
+</section>
+
+<section class="manuscript-border rounded bg-surface-container-lowest p-space-lg md:p-space-xl flex flex-col gap-space-lg" id="prastara">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pb-space-sm border-b border-outline-variant/50">
+<div>
+<span class="text-label-sm font-label-sm text-primary uppercase tracking-widest">Combinatorial Matrix</span>
+<h2 class="text-headline-lg font-headline-lg text-on-background">Prastāra Generator (The Canonical Table)</h2>
+<p class="text-body-md font-body-md text-on-surface-variant">
+            Piṅgala's recursive rule generates all 2ⁿ permutations in exact order. Notice how the first column alternates every 1 row, the second every 2 rows, the third every 4 rows (powers of 2).
+          </p>
+</div>
+<!-- Syllable Buttons (1 to 5) -->
+<div class="flex items-center gap-1.5 bg-surface-container-low p-1 rounded border border-outline-variant">
+<span class="text-label-sm font-label-sm px-2 text-outline">Length:</span>
+<button class="prastara-n-btn px-2.5 py-1 text-code-sm rounded font-bold hover:bg-surface-container transition-colors" data-n="1">1</button>
+<button class="prastara-n-btn px-2.5 py-1 text-code-sm rounded font-bold hover:bg-surface-container transition-colors" data-n="2">2</button>
+<button class="prastara-n-btn px-2.5 py-1 text-code-sm rounded font-bold bg-primary text-white" data-n="3">3</button>
+<button class="prastara-n-btn px-2.5 py-1 text-code-sm rounded font-bold hover:bg-surface-container transition-colors" data-n="4">4</button>
+<button class="prastara-n-btn px-2.5 py-1 text-code-sm rounded font-bold hover:bg-surface-container transition-colors" data-n="5">5</button>
+</div>
+</div>
+<!-- Verification Banner -->
+<div class="p-space-sm rounded bg-surface-container-low border border-outline-variant text-label-sm font-label-sm flex flex-wrap items-center justify-between gap-2 text-on-surface-variant">
+<div>
+<span class="font-bold text-on-surface">Standard 3-Syllable Canonical Order:</span>
+<span class="font-code-sm text-primary ml-1">1:GGG, 2:LGG, 3:GLG, 4:LLG, 5:GGL, 6:LGL, 7:GLL, 8:LLL</span>
+</div>
+<div class="text-outline">Total Count: <strong class="text-on-surface" id="prastaraCount">8 rows</strong></div>
+</div>
+<!-- Table Container -->
+<div class="overflow-x-auto border border-outline-variant rounded">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high text-on-surface text-label-sm font-label-sm uppercase tracking-wider border-b border-outline-variant">
+<th class="p-3 w-16">Row #</th>
+<th class="p-3">Prosodic Syllable Pattern</th>
+<th class="p-3">Binary Vector (L=1, G=0)</th>
+<th class="p-3">Calculation Breakdown</th>
+<th class="p-3 w-24 text-right">Action</th>
+</tr>
+</thead>
+<tbody class="font-code-sm text-code-sm divide-y divide-outline-variant/30" id="prastaraTableBody">
+<!-- Dynamic rows generated by JS -->
+</tbody>
+</table>
+</div>
+</section>
+
+<section class="flex flex-col gap-space-lg" id="solvers">
+<div class="flex flex-col gap-2">
+<span class="text-label-sm font-label-sm text-primary uppercase tracking-widest">Algorithmic Inversion</span>
+<h2 class="text-headline-lg font-headline-lg text-on-background">Naṣṭa &amp; Uddiṣṭa Solvers (Bidirectional Conversion)</h2>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-3xl">
+          Piṅgala provided twin analytical algorithms: <strong>Naṣṭa</strong> ("The Lost") reconstructs the meter given its numerical rank, while <strong>Uddiṣṭa</strong> ("The Indicated") calculates the exact row number given an arbitrary syllable pattern.
+        </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+<!-- Solver A: Nashta (Number -> Meter) -->
+<div class="manuscript-border rounded bg-surface-container-lowest p-space-lg flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h3 class="text-headline-sm font-headline-sm font-bold text-on-surface">1. Naṣṭa Solver (Reverse Lookup)</h3>
+<span class="px-2 py-0.5 rounded text-[11px] font-code-sm bg-primary-fixed text-on-primary-fixed">Decimal → Pattern</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+              Given row number <em class="font-code-sm">R</em> and length <em class="font-code-sm">n</em>, determines the exact meter using successive division by 2 and remainder checking.
+            </p>
+<div class="grid grid-cols-2 gap-3 pt-2">
+<div>
+<label class="text-label-sm font-label-sm text-outline block mb-1" for="nashtaRow">Row Number (R)</label>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded p-2 text-code-sm font-code-sm text-on-surface focus:outline-none focus:ring-1 focus:ring-primary" id="nashtaRow" max="256" min="1" type="number" value="6"/>
+</div>
+<div>
+<label class="text-label-sm font-label-sm text-outline block mb-1" for="nashtaN">Syllables (n)</label>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded p-2 text-code-sm font-code-sm text-on-surface focus:outline-none focus:ring-1 focus:ring-primary" id="nashtaN" max="8" min="1" type="number" value="3"/>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 py-2 rounded bg-primary text-white hover:bg-primary/90 font-label-md text-label-md transition-all active:scale-95 shadow-sm" id="calcNashtaBtn">
+                Find Meter (Naṣṭa)
+              </button>
+<button class="px-3 py-2 rounded bg-surface-container-low border border-outline-variant hover:bg-surface-container text-label-sm font-label-sm text-on-surface" id="presetNashtaBtn">
+                Preset: R=6, n=3
+              </button>
+</div>
+<div class="hidden text-error text-label-sm font-label-sm bg-error-container/40 p-2 rounded" id="nashtaError"></div>
+</div>
+<!-- Nashta Output -->
+<div class="mt-4 p-space-md rounded bg-surface-container-low border border-outline-variant flex flex-col gap-2">
+<span class="text-label-sm font-label-sm text-outline uppercase">Computed Meter</span>
+<div class="flex items-center gap-2 min-h-[44px]" id="nashtaResultTiles">
+<!-- Dynamic tiles rendered here -->
+</div>
+<div class="pt-2 border-t border-outline-variant/50 text-code-sm font-code-sm text-on-surface-variant">
+<span class="font-bold text-on-surface block mb-1">Step-by-Step Bitwise Logic:</span>
+<div class="space-y-1 text-xs" id="nashtaTrace"></div>
+</div>
+</div>
+</div>
+<!-- Solver B: Uddishta (Meter -> Number) -->
+<div class="manuscript-border rounded bg-surface-container-lowest p-space-lg flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h3 class="text-headline-sm font-headline-sm font-bold text-on-surface">2. Uddiṣṭa Solver (Forward Lookup)</h3>
+<span class="px-2 py-0.5 rounded text-[11px] font-code-sm bg-secondary-fixed text-on-secondary-fixed">Pattern → Decimal</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+              Given any pattern of <strong class="text-primary-container">L</strong> and <strong class="text-secondary">G</strong>, calculates its exact canonical row position in the Prastāra table.
+            </p>
+<div>
+<label class="text-label-sm font-label-sm text-outline block mb-1" for="uddishtaInput">Enter Pattern (e.g. GLL, LGLG, or click builder)</label>
+<div class="flex items-center gap-2">
+<input class="flex-1 uppercase bg-surface-container-low border border-outline-variant rounded p-2 text-code-sm font-code-sm text-on-surface focus:outline-none focus:ring-1 focus:ring-secondary tracking-widest" id="uddishtaInput" type="text" value="GLL"/>
+<button class="px-2.5 py-1.5 rounded bg-primary-container text-white font-code-sm font-bold active:scale-95" id="addLBtn">+L</button>
+<button class="px-2.5 py-1.5 rounded bg-secondary text-white font-code-sm font-bold active:scale-95" id="addGBtn">+G</button>
+<button class="px-2.5 py-1.5 rounded bg-surface-container border border-outline-variant text-code-sm font-bold hover:bg-surface-variant active:scale-95" id="clearUddishtaBtn">CLR</button>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 py-2 rounded bg-secondary text-white hover:bg-secondary/90 font-label-md text-label-md transition-all active:scale-95 shadow-sm" id="calcUddishtaBtn">
+                Calculate Row (Uddiṣṭa)
+              </button>
+<button class="px-3 py-2 rounded bg-surface-container-low border border-outline-variant hover:bg-surface-container text-label-sm font-label-sm text-on-surface" id="presetUddishtaBtn">
+                Preset: GLL
+              </button>
+</div>
+<div class="hidden text-error text-label-sm font-label-sm bg-error-container/40 p-2 rounded" id="uddishtaError"></div>
+</div>
+<!-- Uddishta Output -->
+<div class="mt-4 p-space-md rounded bg-surface-container-low border border-outline-variant flex flex-col gap-2">
+<span class="text-label-sm font-label-sm text-outline uppercase">Computed Position</span>
+<div class="flex items-baseline gap-2">
+<span class="text-headline-md font-code-lg font-bold text-secondary" id="uddishtaRowResult">Row #7</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">(Canonical index in 3-syllable prastāra)</span>
+</div>
+<div class="pt-2 border-t border-outline-variant/50 text-code-sm font-code-sm text-on-surface-variant">
+<span class="font-bold text-on-surface block mb-1">Step-by-Step Summation:</span>
+<div class="space-y-1 text-xs" id="uddishtaTrace"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="manuscript-border rounded bg-surface-container-lowest p-space-lg md:p-space-xl flex flex-col gap-space-lg" id="encoder">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pb-space-sm border-b border-outline-variant/50">
+<div>
+<span class="text-label-sm font-label-sm text-primary uppercase tracking-widest">Digital Bridge</span>
+<h2 class="text-headline-lg font-headline-lg text-on-background">ASCII Text to Prosodic Binary Byte Converter</h2>
+<p class="text-body-md font-body-md text-on-surface-variant">
+            Type any Latin word or Sanskrit title. Each character converts to its standard 8-bit ASCII byte, translated into Piṅgala's 8-tile Laghu/Guru sequence.
+          </p>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-4 py-2 rounded bg-tertiary text-on-tertiary hover:bg-tertiary/90 text-label-md font-label-md flex items-center gap-2 shadow-sm active:scale-95" id="playAllTextAudioBtn">
+<span class="material-symbols-outlined text-base">volume_up</span>
+<span>Play Whole Phrase</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-stretch gap-space-md">
+<div class="flex-1">
+<label class="text-label-sm font-label-sm text-outline block mb-1" for="textEncoderInput">Enter Text to Encode</label>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded p-2.5 text-code-md font-code-md text-on-surface uppercase focus:outline-none focus:ring-1 focus:ring-primary tracking-wider" id="textEncoderInput" maxlength="16" type="text" value="PINGALA"/>
+</div>
+<div class="flex items-end gap-2">
+<button class="px-3 py-2.5 rounded bg-surface-container-low border border-outline-variant hover:bg-surface-container text-code-sm font-code-sm" id="presetWord1">"NAMASTE"</button>
+<button class="px-3 py-2.5 rounded bg-surface-container-low border border-outline-variant hover:bg-surface-container text-code-sm font-code-sm" id="presetWord2">"Veda"</button>
+<button class="px-3 py-2.5 rounded bg-surface-container-low border border-outline-variant hover:bg-surface-container text-code-sm font-code-sm" id="presetWord3">"0101"</button>
+</div>
+</div>
+<!-- Character Breakdown Table -->
+<div class="overflow-x-auto border border-outline-variant rounded">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high text-on-surface text-label-sm font-label-sm uppercase tracking-wider border-b border-outline-variant">
+<th class="p-3 w-16 text-center">Char</th>
+<th class="p-3 w-24 text-center">ASCII Dec</th>
+<th class="p-3 w-36 text-center">8-Bit Byte (MSB→LSB)</th>
+<th class="p-3">Prosodic Laghu/Guru Equivalent</th>
+<th class="p-3 w-20 text-right">Listen</th>
+</tr>
+</thead>
+<tbody class="font-code-sm text-code-sm divide-y divide-outline-variant/30" id="encoderTableBody">
+<!-- Dynamically populated -->
+</tbody>
+</table>
+</div>
+</section>
+
+<section class="flex flex-col gap-space-lg" id="meru">
+<div class="flex flex-col gap-2">
+<span class="text-label-sm font-label-sm text-primary uppercase tracking-widest">Combinatorial Pyramids</span>
+<h2 class="text-headline-lg font-headline-lg text-on-background">Meru-Prastāra &amp; Mātrā-Meru (Fibonacci in Sanskrit Meters)</h2>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-3xl">
+          Halāyudha's 10th-century commentary visualized Piṅgala's combinations as a mountain (<em>Meru</em>). Simultaneously, poets Virahāṅka and Hemacandra uncovered the exact sequence now called Fibonacci by enumerating poetic rhythms by total moraic time beats (<em>mātrā</em>).
+        </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Meru Prastara Pyramid (Pascal's Triangle) -->
+<div class="lg:col-span-7 manuscript-border rounded bg-surface-container-lowest p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between border-b border-outline-variant/40 pb-2">
+<div>
+<h3 class="text-headline-sm font-headline-sm font-bold text-on-surface">Meru-Prastāra (Pascal's Triangle)</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Binomial combinations of G and L for n = 0 to 6</p>
+</div>
+<span class="text-code-sm font-code-sm text-outline">Row Sums = 2ⁿ</span>
+</div>
+<div class="flex flex-col items-center justify-center p-4 bg-surface-container-low rounded border border-outline-variant overflow-x-auto min-h-[300px]" id="meruPyramidContainer">
+<!-- Dynamic Pyramid Rows generated via JS -->
+</div>
+<div class="p-space-sm rounded bg-surface-container-low border border-outline-variant/60 text-code-sm font-code-sm text-on-surface-variant flex items-center justify-between">
+<span>Hover any node to see combinatorial notation: <span class="font-bold text-primary" id="meruHoverNotation">C(n, k)</span></span>
+<span class="text-label-sm font-label-sm text-outline">Halāyudha (10th c. CE)</span>
+</div>
+</div>
+<!-- Matra-Meru & Fibonacci Calculator -->
+<div class="lg:col-span-5 manuscript-border rounded bg-surface-container-lowest p-space-lg flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-sm">
+<div class="border-b border-outline-variant/40 pb-2">
+<h3 class="text-headline-sm font-headline-sm font-bold text-on-surface">Mātrā-Meru (Moraic Beats)</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+                L = 1 beat, G = 2 beats. The count of valid meters with total duration <em>M</em> equals the <em>(M+1)</em>th Fibonacci number!
+              </p>
+</div>
+<!-- Beat Selector -->
+<div>
+<label class="text-label-sm font-label-sm text-outline block mb-1" for="matraBeatSelector">Select Total Moraic Beats (Mātrā):</label>
+<div class="flex items-center gap-1">
+<button class="matra-btn px-3 py-1.5 rounded font-code-sm text-code-sm border border-outline-variant hover:bg-surface-container" data-beats="1">1</button>
+<button class="matra-btn px-3 py-1.5 rounded font-code-sm text-code-sm border border-outline-variant hover:bg-surface-container" data-beats="2">2</button>
+<button class="matra-btn px-3 py-1.5 rounded font-code-sm text-code-sm border border-outline-variant hover:bg-surface-container" data-beats="3">3</button>
+<button class="matra-btn px-3 py-1.5 rounded font-code-sm text-code-sm bg-primary text-white border border-primary font-bold" data-beats="4">4</button>
+<button class="matra-btn px-3 py-1.5 rounded font-code-sm text-code-sm border border-outline-variant hover:bg-surface-container" data-beats="5">5</button>
+<button class="matra-btn px-3 py-1.5 rounded font-code-sm text-code-sm border border-outline-variant hover:bg-surface-container" data-beats="6">6</button>
+</div>
+</div>
+<!-- Fibonacci Metric Output -->
+<div class="p-space-md rounded bg-surface-container-low border border-outline-variant flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="text-label-sm font-label-sm text-outline">Total Valid Combinations:</span>
+<span class="text-headline-sm font-code-lg font-bold text-primary" id="matraCountDisplay">5 combinations</span>
+</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant">
+                Fibonacci Sequence: <span class="font-code-sm text-on-surface">1, 2, 3, 5, 8, 13, 21...</span>
+</div>
+<!-- List of Valid Combinations for M beats -->
+<div class="pt-2 border-t border-outline-variant/40">
+<span class="text-label-sm font-label-sm text-outline block mb-1">Valid Meter Patterns:</span>
+<div class="flex flex-wrap gap-2 max-h-40 overflow-y-auto" id="matraCombinationsList">
+<!-- Dynamically populated -->
+</div>
+</div>
+</div>
+</div>
+<div class="text-code-sm font-code-sm text-on-surface-variant/80 border-t border-outline-variant/30 pt-2">
+            Discovered by <strong>Virahāṅka (c. 600 CE)</strong> and <strong>Hemacandra (1150 CE)</strong>, over half a century before Leonardo of Pisa (Fibonacci, 1202 CE).
+          </div>
+</div>
+</div>
+</section>
+
+<section class="manuscript-border rounded bg-surface-container-lowest p-space-lg md:p-space-xl flex flex-col gap-space-lg" id="synthesizer">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pb-space-sm border-b border-outline-variant/50">
+<div>
+<span class="text-label-sm font-label-sm text-primary uppercase tracking-widest">Acoustic Engine</span>
+<h2 class="text-headline-lg font-headline-lg text-on-background">Web Audio Prosody Synthesizer</h2>
+<p class="text-body-md font-body-md text-on-surface-variant">
+            Experience the auditory reality of Vedic meters. Laghu produces a short, crisp tone (880 Hz, 80 ms), while Guru produces a resonant harmonic tone (440 Hz, 240 ms).
+          </p>
+</div>
+<!-- Presets -->
+<div class="flex items-center gap-2">
+<span class="text-label-sm font-label-sm text-outline">Classic Meters:</span>
+<button class="synth-preset-btn px-2.5 py-1 text-code-sm rounded bg-surface-container-low border border-outline-variant hover:bg-surface-container" data-preset="GAYATRI">Gāyatrī (24)</button>
+<button class="synth-preset-btn px-2.5 py-1 text-code-sm rounded bg-surface-container-low border border-outline-variant hover:bg-surface-container" data-preset="ANUSTUBH">Anuṣṭubh (32)</button>
+<button class="synth-preset-btn px-2.5 py-1 text-code-sm rounded bg-surface-container-low border border-outline-variant hover:bg-surface-container" data-preset="TRISTUBH">Triṣṭubh (44)</button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+<!-- Controls & Sliders -->
+<div class="lg:col-span-5 flex flex-col gap-space-md p-space-md rounded bg-surface-container-low border border-outline-variant">
+<div>
+<div class="flex items-center justify-between mb-1">
+<label class="text-label-sm font-label-sm text-on-surface" for="tempoSlider">Tempo (Speed)</label>
+<span class="text-code-sm font-code-sm text-primary font-bold" id="tempoValue">140 BPM</span>
+</div>
+<input class="w-full accent-primary" id="tempoSlider" max="240" min="60" type="range" value="140"/>
+</div>
+<div>
+<div class="flex items-center justify-between mb-1">
+<label class="text-label-sm font-label-sm text-on-surface" for="synthVolume">Master Volume</label>
+<span class="text-code-sm font-code-sm text-secondary font-bold" id="volumeValue">75%</span>
+</div>
+<input class="w-full accent-secondary" id="synthVolume" max="100" min="0" type="range" value="75"/>
+</div>
+<div class="flex items-center gap-3 pt-2">
+<button class="flex-1 py-2.5 rounded bg-tertiary text-on-tertiary hover:bg-tertiary/90 font-label-md text-label-md flex items-center justify-center gap-2 active:scale-95 shadow-sm" id="synthPlayBtn">
+<span class="material-symbols-outlined text-base" id="synthPlayIcon">play_arrow</span>
+<span id="synthPlayLabel">Play Active Meter</span>
+</button>
+<button class="px-4 py-2.5 rounded bg-surface-container border border-outline-variant hover:bg-surface-variant font-label-md text-label-md active:scale-95" id="synthStopBtn">
+              Stop
+            </button>
+</div>
+</div>
+<!-- Visual Scrubber & Playhead Display -->
+<div class="lg:col-span-7 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between text-label-sm font-label-sm text-outline">
+<span>Rhythmic Pattern Display</span>
+<span id="synthPlayingNote">Ready</span>
+</div>
+<div class="p-space-md rounded bg-surface-container-low border border-outline-variant min-h-[90px] flex items-center gap-1.5 overflow-x-auto" id="synthTilesStrip">
+<!-- Dynamically populated tiles -->
+</div>
+<div class="flex items-center gap-4 text-xs font-code-sm text-on-surface-variant pt-1">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded bg-primary-container inline-block"></span>
+<span>Laghu (880Hz / 1 unit)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-5 h-3 rounded bg-secondary inline-block"></span>
+<span>Guru (440Hz / 2 units)</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+</main>
+<footer class="bg-surface-container-low dark:bg-inverse-surface border-t border-outline-variant/50 dark:border-outline/30 mt-space-xl">
+<div class="w-full max-w-7xl mx-auto px-space-lg md:px-margin py-space-xl flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex flex-col items-center md:items-start gap-1">
+<div class="text-headline-md font-headline-md font-bold text-primary dark:text-primary-fixed">PingalaBit</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant dark:text-inverse-on-surface/80 text-center md:text-left">
+  © 2025 PingalaBit. IKS Assignment No. 6. Computational Prosody &amp; Binary Mathematics.
+</p>
+<span class="text-code-sm font-code-sm text-outline">Home · Explore &amp; Solve · Quiz · Guided Course · About &amp; Team</span>
+</div>
+<div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-label-sm font-label-sm">
+<a class="text-on-surface-variant dark:text-inverse-on-surface/80 hover:text-primary dark:hover:text-primary-fixed transition-colors" href="about.html#timeline">Chandaḥśāstra Sources</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface/80 hover:text-primary dark:hover:text-primary-fixed transition-colors" href="learn.html#meru">Halayudha Mṛtasañjīvinī</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface/80 hover:text-primary dark:hover:text-primary-fixed transition-colors" href="about.html#glossary">Glossary &amp; IAST</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface/80 hover:text-primary dark:hover:text-primary-fixed transition-colors" href="about.html#roster">Team Roster</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface/80 hover:text-primary dark:hover:text-primary-fixed transition-colors" href="learn.html#solvers">Algorithmic Proofs</a>
+</div>
+</div>
+</footer>
+
+<script>
+    // --- 1. Sound Synthesis Engine (Web Audio API) ---
+    class ProsodyAudioEngine {
+      constructor() {
+        this.ctx = null;
+        this.isMuted = false;
+        this.volume = 0.75;
+      }
+
+      initContext() {
+        if (!this.ctx) {
+          const AudioContext = window.AudioContext || window.webkitAudioContext;
+          if (AudioContext) {
+            this.ctx = new AudioContext();
+          }
+        }
+        if (this.ctx && this.ctx.state === 'suspended') {
+          this.ctx.resume();
+        }
+      }
+
+      // Laghu: High crisp tone (880Hz, ~80ms)
+      // Guru: Deep resonant harmonic tone (440Hz, ~240ms)
+      playTone(type = 'L', customDuration = null) {
+        if (this.isMuted) return;
+        this.initContext();
+        if (!this.ctx) return;
+
+        const now = this.ctx.currentTime;
+        const osc = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
+
+        const isLaghu = (type === 'L' || type === '1');
+        const freq = isLaghu ? 880 : 440;
+        const duration = customDuration !== null ? customDuration : (isLaghu ? 0.09 : 0.24);
+
+        osc.type = isLaghu ? 'triangle' : 'sine';
+        osc.frequency.setValueAtTime(freq, now);
+
+        gain.gain.setValueAtTime(this.volume * 0.4, now);
+        gain.gain.exponentialRampToValueAtTime(0.0001, now + duration);
+
+        osc.connect(gain);
+        gain.connect(this.ctx.destination);
+
+        osc.start(now);
+        osc.stop(now + duration);
+      }
+
+      async playSequence(sequence, bpm = 140, onStep = null) {
+        this.initContext();
+        const beatUnitSec = 60 / bpm;
+
+        for (let i = 0; i < sequence.length; i++) {
+          const item = sequence[i];
+          if (onStep) onStep(i, item);
+          const isL = (item === 'L' || item === '1');
+          const duration = isL ? (beatUnitSec * 0.6) : (beatUnitSec * 1.3);
+          this.playTone(isL ? 'L' : 'G', duration);
+          await new Promise(r => setTimeout(r, (isL ? beatUnitSec * 0.8 : beatUnitSec * 1.5) * 1000));
+        }
+        if (onStep) onStep(-1, null);
+      }
+    }
+
+    const soundEngine = new ProsodyAudioEngine();
+
+
+    // --- 2. Theme & Sound UI Toggles ---
+    const themeToggleBtn = document.getElementById('themeToggleBtn');
+    const themeToggleIcon = document.getElementById('themeToggleIcon');
+
+    themeToggleBtn.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      const isDark = document.documentElement.classList.contains('dark');
+      themeToggleIcon.textContent = isDark ? 'light_mode' : 'dark_mode';
+    });
+
+    const audioMuteBtn = document.getElementById('audioMuteBtn');
+    const audioMuteIcon = document.getElementById('audioMuteIcon');
+
+    audioMuteBtn.addEventListener('click', () => {
+      soundEngine.isMuted = !soundEngine.isMuted;
+      audioMuteIcon.textContent = soundEngine.isMuted ? 'volume_off' : 'volume_up';
+      audioMuteBtn.classList.toggle('text-error', soundEngine.isMuted);
+    });
+
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileDrawer.classList.toggle('hidden');
+      mobileDrawer.classList.toggle('flex');
+    });
+
+
+    // --- 4. Playground Section Implementation ---
+    let pgLength = 4;
+    let pgStates = ['L', 'G', 'L', 'L'];
+    const syllableCountSelect = document.getElementById('syllableCount');
+    const interactiveTileContainer = document.getElementById('interactiveTileContainer');
+    const pgPatternElem = document.getElementById('pgPattern');
+    const pgBinaryElem = document.getElementById('pgBinary');
+    const pgRowElem = document.getElementById('pgRow');
+    const pgTotalElem = document.getElementById('pgTotal');
+    const pgTraceMathElem = document.getElementById('pgTraceMath');
+    const playPlaygroundRhythmBtn = document.getElementById('playPlaygroundRhythmBtn');
+
+    function renderPlayground() {
+      interactiveTileContainer.innerHTML = '';
+      pgStates.forEach((state, i) => {
+        const btn = document.createElement('button');
+        const isL = state === 'L';
+        btn.className = isL 
+          ? 'tile-laghu w-14 h-16 rounded flex flex-col items-center justify-center font-code-md font-bold transition-all active:scale-95 shadow cursor-pointer'
+          : 'tile-guru w-24 h-16 rounded flex flex-col items-center justify-center font-code-md font-bold transition-all active:scale-95 shadow cursor-pointer';
+
+        btn.innerHTML = `
+          <span class="text-xl">${state}</span>
+          <span class="text-xs opacity-90">${isL ? '1 (।)' : '0 (ऽ)'}</span>
+          <span class="text-[10px] opacity-70">2^${i}=${Math.pow(2, i)}</span>
+        `;
+
+        btn.addEventListener('click', () => {
+          pgStates[i] = isL ? 'G' : 'L';
+          soundEngine.playTone(pgStates[i]);
+          renderPlayground();
+          updatePlaygroundStats();
+        });
+
+        interactiveTileContainer.appendChild(btn);
+      });
+      updatePlaygroundStats();
+    }
+
+    function updatePlaygroundStats() {
+      const patternStr = pgStates.join(' ');
+      const binaryStr = pgStates.map(s => s === 'L' ? 1 : 0).join(' ');
+      let sum = 0;
+      const calcParts = [];
+
+      pgStates.forEach((s, idx) => {
+        const place = Math.pow(2, idx);
+        if (s === 'L') {
+          sum += place;
+          calcParts.push(`<span class="text-primary font-bold">2^${idx} (${place})</span>`);
+        } else {
+          calcParts.push(`<span class="text-outline">0</span>`);
+        }
+      });
+
+      const finalRow = 1 + sum;
+      pgPatternElem.textContent = patternStr;
+      pgBinaryElem.textContent = binaryStr;
+      pgRowElem.textContent = `Row #${finalRow}`;
+      pgTotalElem.textContent = `2^${pgLength} = ${Math.pow(2, pgLength)}`;
+
+      pgTraceMathElem.innerHTML = `
+        Row = 1 + [ ${calcParts.join(' + ')} ] = 1 + ${sum} = <strong>${finalRow}</strong>.
+        <div class="text-xs mt-1 text-outline">Note: In Pingala's canonical ordering, Syllable 1 corresponds to bit 0 (2⁰), Syllable 2 to 2¹, up to Syllable n to 2^(n-1).</div>
+      `;
+    }
+
+    syllableCountSelect.addEventListener('change', (e) => {
+      pgLength = parseInt(e.target.value);
+      while (pgStates.length < pgLength) pgStates.push('L');
+      if (pgStates.length > pgLength) pgStates = pgStates.slice(0, pgLength);
+      renderPlayground();
+    });
+
+    playPlaygroundRhythmBtn.addEventListener('click', () => {
+      soundEngine.playSequence(pgStates, 150);
+    });
+
+    renderPlayground();
+
+
+    // --- 5. Section 4: Prastara Canonical Table Generator ---
+    let prastaraN = 3;
+    const prastaraTableBody = document.getElementById('prastaraTableBody');
+    const prastaraCount = document.getElementById('prastaraCount');
+    const prastaraNBtns = document.querySelectorAll('.prastara-n-btn');
+
+    // Piṅgala's Canonical Generation Rule:
+    // Row 1: All G
+    // Given Row r (0-indexed = r), binary representation of r gives pattern!
+    // Bit 0 = 0 -> G, Bit 0 = 1 -> L
+    function generatePrastara(n) {
+      prastaraTableBody.innerHTML = '';
+      const total = Math.pow(2, n);
+      prastaraCount.textContent = `${total} rows (2^${n})`;
+
+      for (let r = 0; r < total; r++) {
+        // Compute pattern
+        const pattern = [];
+        let breakdownParts = [];
+        let sum = 0;
+
+        for (let i = 0; i < n; i++) {
+          const bit = (r >> i) & 1;
+          if (bit === 1) {
+            pattern.push('L');
+            const p = Math.pow(2, i);
+            sum += p;
+            breakdownParts.push(`2^${i}=${p}`);
+          } else {
+            pattern.push('G');
+          }
+        }
+
+        const tr = document.createElement('tr');
+        tr.className = 'hover:bg-surface-container/60 transition-colors';
+
+        // Syllable tiles small rendering
+        const tilesHtml = pattern.map(s => {
+          return s === 'L'
+            ? `<span class="inline-flex items-center justify-center w-6 h-6 rounded bg-primary-container text-white font-bold text-xs shadow-sm">L</span>`
+            : `<span class="inline-flex items-center justify-center w-8 h-6 rounded bg-secondary text-white font-bold text-xs shadow-sm">G</span>`;
+        }).join(' ');
+
+        const binaryBits = pattern.map(s => s === 'L' ? 1 : 0).join(' ');
+        const calcText = breakdownParts.length > 0 
+          ? `1 + (${breakdownParts.join(' + ')}) = ${r + 1}` 
+          : `1 + 0 = 1`;
+
+        tr.innerHTML = `
+          <td class="p-3 font-bold text-on-surface">${r + 1}</td>
+          <td class="p-3"><div class="flex items-center gap-1">${tilesHtml}</div></td>
+          <td class="p-3 text-secondary font-bold">${binaryBits}</td>
+          <td class="p-3 text-on-surface-variant text-xs">${calcText}</td>
+          <td class="p-3 text-right">
+            <button class="play-row-btn text-xs px-2 py-1 rounded bg-surface-container hover:bg-surface-variant text-on-surface flex items-center gap-1 ml-auto" data-pattern="${pattern.join('')}">
+              <span class="material-symbols-outlined text-sm">play_arrow</span>
+            </button>
+          </td>
+        `;
+
+        prastaraTableBody.appendChild(tr);
+      }
+
+      // Attach row sound listeners
+      document.querySelectorAll('.play-row-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const p = btn.getAttribute('data-pattern').split('');
+          soundEngine.playSequence(p, 160);
+        });
+      });
+    }
+
+    prastaraNBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        prastaraNBtns.forEach(b => {
+          b.className = 'prastara-n-btn px-2.5 py-1 text-code-sm rounded font-bold hover:bg-surface-container transition-colors';
+        });
+        btn.className = 'prastara-n-btn px-2.5 py-1 text-code-sm rounded font-bold bg-primary text-white';
+        prastaraN = parseInt(btn.getAttribute('data-n'));
+        generatePrastara(prastaraN);
+      });
+    });
+
+    generatePrastara(3);
+
+
+    // --- 6. Section 5 & 6: Dual Solvers (Nashta & Uddishta) ---
+    // Solver A: Nashta
+    const nashtaRowInput = document.getElementById('nashtaRow');
+    const nashtaNInput = document.getElementById('nashtaN');
+    const calcNashtaBtn = document.getElementById('calcNashtaBtn');
+    const presetNashtaBtn = document.getElementById('presetNashtaBtn');
+    const nashtaResultTiles = document.getElementById('nashtaResultTiles');
+    const nashtaTrace = document.getElementById('nashtaTrace');
+    const nashtaError = document.getElementById('nashtaError');
+
+    function runNashta() {
+      nashtaError.classList.add('hidden');
+      const R = parseInt(nashtaRowInput.value);
+      const n = parseInt(nashtaNInput.value);
+
+      if (isNaN(R) || R < 1) {
+        nashtaError.textContent = 'Please enter a valid row number >= 1.';
+        nashtaError.classList.remove('hidden');
+        return;
+      }
+      const maxRows = Math.pow(2, n);
+      if (R > maxRows) {
+        nashtaError.textContent = `Row ${R} exceeds total permutations 2^${n} = ${maxRows}.`;
+        nashtaError.classList.remove('hidden');
+        return;
+      }
+
+      let v = R - 1;
+      const pattern = [];
+      const traceSteps = [];
+      traceSteps.push(`Initial value: v = Row - 1 = ${R} - 1 = ${v}`);
+
+      for (let i = 0; i < n; i++) {
+        const rem = v % 2;
+        if (rem === 1) {
+          pattern.push('L');
+          traceSteps.push(`Step ${i + 1} (2^${i}): v % 2 == 1 &rarr; Assign Laghu (L). Next v = floor(${v} / 2) = ${Math.floor(v / 2)}`);
+        } else {
+          pattern.push('G');
+          traceSteps.push(`Step ${i + 1} (2^${i}): v % 2 == 0 &rarr; Assign Guru (G). Next v = floor(${v} / 2) = ${Math.floor(v / 2)}`);
+        }
+        v = Math.floor(v / 2);
+      }
+
+      // Render Tiles
+      nashtaResultTiles.innerHTML = pattern.map((s, idx) => {
+        return s === 'L'
+          ? `<div class="tile-laghu w-11 h-12 rounded flex flex-col items-center justify-center font-bold text-xs"><span class="text-sm">L</span><span>1</span></div>`
+          : `<div class="tile-guru w-16 h-12 rounded flex flex-col items-center justify-center font-bold text-xs"><span class="text-sm">G</span><span>0</span></div>`;
+      }).join('');
+
+      nashtaTrace.innerHTML = traceSteps.map(step => `<div>&bull; ${step}</div>`).join('');
+      soundEngine.playSequence(pattern, 180);
+    }
+
+    calcNashtaBtn.addEventListener('click', runNashta);
+    presetNashtaBtn.addEventListener('click', () => {
+      nashtaRowInput.value = 6;
+      nashtaNInput.value = 3;
+      runNashta();
+    });
+    runNashta();
+
+    // Solver B: Uddishta
+    const uddishtaInput = document.getElementById('uddishtaInput');
+    const calcUddishtaBtn = document.getElementById('calcUddishtaBtn');
+    const presetUddishtaBtn = document.getElementById('presetUddishtaBtn');
+    const addLBtn = document.getElementById('addLBtn');
+    const addGBtn = document.getElementById('addGBtn');
+    const clearUddishtaBtn = document.getElementById('clearUddishtaBtn');
+    const uddishtaRowResult = document.getElementById('uddishtaRowResult');
+    const uddishtaTrace = document.getElementById('uddishtaTrace');
+    const uddishtaError = document.getElementById('uddishtaError');
+
+    function runUddishta() {
+      uddishtaError.classList.add('hidden');
+      const val = uddishtaInput.value.trim().toUpperCase();
+      if (!val || /[^LG]/.test(val)) {
+        uddishtaError.textContent = 'Please enter a pattern consisting strictly of L and G characters.';
+        uddishtaError.classList.remove('hidden');
+        return;
+      }
+
+      const pattern = val.split('');
+      let sum = 0;
+      const traceSteps = [];
+      traceSteps.push(`Pattern length n = ${pattern.length}. Starting index: base 1.`);
+
+      pattern.forEach((char, idx) => {
+        const placeVal = Math.pow(2, idx);
+        if (char === 'L') {
+          sum += placeVal;
+          traceSteps.push(`Pos ${idx + 1} (${char}): Laghu detected &rarr; Add 2^${idx} (${placeVal}). Running total = ${sum}`);
+        } else {
+          traceSteps.push(`Pos ${idx + 1} (${char}): Guru detected &rarr; Add 0. Running total = ${sum}`);
+        }
+      });
+
+      const finalRow = 1 + sum;
+      traceSteps.push(`Final step: Add 1 &rarr; Row = 1 + ${sum} = <strong>${finalRow}</strong>.`);
+
+      uddishtaRowResult.textContent = `Row #${finalRow}`;
+      uddishtaTrace.innerHTML = traceSteps.map(step => `<div>&bull; ${step}</div>`).join('');
+      soundEngine.playSequence(pattern, 180);
+    }
+
+    calcUddishtaBtn.addEventListener('click', runUddishta);
+    presetUddishtaBtn.addEventListener('click', () => {
+      uddishtaInput.value = 'GLL';
+      runUddishta();
+    });
+    addLBtn.addEventListener('click', () => { uddishtaInput.value += 'L'; runUddishta(); });
+    addGBtn.addEventListener('click', () => { uddishtaInput.value += 'G'; runUddishta(); });
+    clearUddishtaBtn.addEventListener('click', () => { uddishtaInput.value = ''; uddishtaRowResult.textContent = 'Row #--'; uddishtaTrace.innerHTML = ''; });
+    runUddishta();
+
+
+    // --- 7. Section 7: Text to Prosody ASCII Converter ---
+    const textEncoderInput = document.getElementById('textEncoderInput');
+    const encoderTableBody = document.getElementById('encoderTableBody');
+    const playAllTextAudioBtn = document.getElementById('playAllTextAudioBtn');
+    let currentFullSequence = [];
+
+    function updateTextEncoder() {
+      const text = textEncoderInput.value || 'P';
+      encoderTableBody.innerHTML = '';
+      currentFullSequence = [];
+
+      for (let i = 0; i < text.length; i++) {
+        const ch = text[i];
+        const code = ch.charCodeAt(0);
+        // 8-bit binary representation (MSB to LSB)
+        const binaryByte = code.toString(2).padStart(8, '0');
+        const prosodyPattern = binaryByte.split('').map(b => b === '1' ? 'L' : 'G');
+        currentFullSequence.push(...prosodyPattern);
+
+        const tr = document.createElement('tr');
+        tr.className = 'hover:bg-surface-container/60 transition-colors';
+
+        const tiles = prosodyPattern.map(p => {
+          return p === 'L'
+            ? `<span class="inline-flex items-center justify-center w-5 h-6 rounded bg-primary-container text-white text-[10px] font-bold">L</span>`
+            : `<span class="inline-flex items-center justify-center w-7 h-6 rounded bg-secondary text-white text-[10px] font-bold">G</span>`;
+        }).join(' ');
+
+        tr.innerHTML = `
+          <td class="p-3 text-center font-bold text-on-surface text-base">${ch}</td>
+          <td class="p-3 text-center text-outline">${code}</td>
+          <td class="p-3 text-center font-bold text-secondary tracking-widest">${binaryByte}</td>
+          <td class="p-3"><div class="flex items-center gap-1">${tiles}</div></td>
+          <td class="p-3 text-right">
+            <button class="play-char-btn text-xs px-2 py-1 rounded bg-surface-container hover:bg-surface-variant text-on-surface" data-pattern="${prosodyPattern.join('')}">
+              <span class="material-symbols-outlined text-sm">volume_up</span>
+            </button>
+          </td>
+        `;
+
+        encoderTableBody.appendChild(tr);
+      }
+
+      document.querySelectorAll('.play-char-btn').forEach(b => {
+        b.addEventListener('click', () => {
+          const pat = b.getAttribute('data-pattern').split('');
+          soundEngine.playSequence(pat, 220);
+        });
+      });
+    }
+
+    textEncoderInput.addEventListener('input', updateTextEncoder);
+    document.getElementById('presetWord1').addEventListener('click', () => { textEncoderInput.value = 'NAMASTE'; updateTextEncoder(); });
+    document.getElementById('presetWord2').addEventListener('click', () => { textEncoderInput.value = 'VEDA'; updateTextEncoder(); });
+    document.getElementById('presetWord3').addEventListener('click', () => { textEncoderInput.value = '0101'; updateTextEncoder(); });
+    playAllTextAudioBtn.addEventListener('click', () => {
+      if (currentFullSequence.length > 0) {
+        soundEngine.playSequence(currentFullSequence.slice(0, 32), 240);
+      }
+    });
+    updateTextEncoder();
+
+
+    // --- 8. Section 8: Meru-Prastara & Matra-Meru ---
+    // Pascal triangle generator up to 6 rows
+    const meruPyramidContainer = document.getElementById('meruPyramidContainer');
+    const meruHoverNotation = document.getElementById('meruHoverNotation');
+
+    function nCr(n, r) {
+      if (r < 0 || r > n) return 0;
+      if (r === 0 || r === n) return 1;
+      let c = 1;
+      for (let i = 1; i <= r; i++) {
+        c = c * (n - (i - 1)) / i;
+      }
+      return Math.round(c);
+    }
+
+    function renderMeruPyramid() {
+      meruPyramidContainer.innerHTML = '';
+      const totalRows = 6;
+
+      for (let n = 0; n <= totalRows; n++) {
+        const rowDiv = document.createElement('div');
+        rowDiv.className = 'flex items-center justify-center gap-2 my-1';
+
+        // Row indicator badge
+        const rowSum = Math.pow(2, n);
+        
+        for (let k = 0; k <= n; k++) {
+          const val = nCr(n, k);
+          const node = document.createElement('div');
+          node.className = 'w-9 h-9 md:w-11 md:h-11 rounded border border-outline-variant bg-surface-container-lowest flex items-center justify-center font-code-sm font-bold text-xs md:text-sm text-on-surface hover:border-primary hover:bg-primary-fixed cursor-pointer transition-all shadow-sm';
+          node.textContent = val;
+
+          node.addEventListener('mouseenter', () => {
+            meruHoverNotation.textContent = `n = ${n}, k = ${k} &rarr; C(${n}, ${k}) = ${val} combinations (Row Sum = 2^${n} = ${rowSum})`;
+            soundEngine.playTone(k % 2 === 0 ? 'G' : 'L');
+          });
+
+          rowDiv.appendChild(node);
+        }
+
+        meruPyramidContainer.appendChild(rowDiv);
+      }
+    }
+    renderMeruPyramid();
+
+    // Matra-Meru (Fibonacci combinations for M beats)
+    const matraBtns = document.querySelectorAll('.matra-btn');
+    const matraCountDisplay = document.getElementById('matraCountDisplay');
+    const matraCombinationsList = document.getElementById('matraCombinationsList');
+
+    function getMatraCombinations(totalBeats) {
+      const results = [];
+      function build(curr, rem) {
+        if (rem === 0) {
+          results.push([...curr]);
+          return;
+        }
+        // Try Laghu (1 beat)
+        if (rem >= 1) {
+          curr.push('L');
+          build(curr, rem - 1);
+          curr.pop();
+        }
+        // Try Guru (2 beats)
+        if (rem >= 2) {
+          curr.push('G');
+          build(curr, rem - 2);
+          curr.pop();
+        }
+      }
+      build([], totalBeats);
+      return results;
+    }
+
+    function renderMatraMeru(beats) {
+      const combos = getMatraCombinations(beats);
+      matraCountDisplay.textContent = `${combos.length} valid meter${combos.length > 1 ? 's' : ''}`;
+
+      matraCombinationsList.innerHTML = '';
+      combos.forEach(c => {
+        const item = document.createElement('div');
+        item.className = 'p-1.5 rounded bg-surface-container-lowest border border-outline-variant text-code-sm font-code-sm flex items-center gap-1';
+        item.innerHTML = c.map(s => {
+          return s === 'L'
+            ? `<span class="px-1.5 py-0.5 rounded bg-primary-container text-white text-[10px] font-bold">L(1)</span>`
+            : `<span class="px-1.5 py-0.5 rounded bg-secondary text-white text-[10px] font-bold">G(2)</span>`;
+        }).join('');
+        matraCombinationsList.appendChild(item);
+      });
+    }
+
+    matraBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        matraBtns.forEach(b => {
+          b.className = 'matra-btn px-3 py-1.5 rounded font-code-sm text-code-sm border border-outline-variant hover:bg-surface-container';
+        });
+        btn.className = 'matra-btn px-3 py-1.5 rounded font-code-sm text-code-sm bg-primary text-white border border-primary font-bold';
+        const bVal = parseInt(btn.getAttribute('data-beats'));
+        renderMatraMeru(bVal);
+      });
+    });
+    renderMatraMeru(4);
+
+
+    // --- 9. Section 10: Dedicated Synthesizer Controls ---
+    const tempoSlider = document.getElementById('tempoSlider');
+    const tempoValue = document.getElementById('tempoValue');
+    const synthVolume = document.getElementById('synthVolume');
+    const volumeValue = document.getElementById('volumeValue');
+    const synthPlayBtn = document.getElementById('synthPlayBtn');
+    const synthPlayIcon = document.getElementById('synthPlayIcon');
+    const synthPlayLabel = document.getElementById('synthPlayLabel');
+    const synthStopBtn = document.getElementById('synthStopBtn');
+    const synthTilesStrip = document.getElementById('synthTilesStrip');
+    const synthPlayingNote = document.getElementById('synthPlayingNote');
+    const synthPresetBtns = document.querySelectorAll('.synth-preset-btn');
+
+    let currentMeterSequence = ['L', 'L', 'G', 'L', 'G', 'G', 'L', 'L'];
+    let isSynthPlaying = false;
+    let synthAbortController = false;
+
+    function renderSynthTiles(activeIdx = -1) {
+      synthTilesStrip.innerHTML = '';
+      currentMeterSequence.forEach((s, idx) => {
+        const isL = s === 'L';
+        const tile = document.createElement('div');
+        const activeClass = idx === activeIdx ? 'ring-2 ring-tertiary scale-105' : '';
+        tile.className = isL
+          ? `tile-laghu shrink-0 w-8 h-10 rounded flex items-center justify-center font-bold text-xs transition-all ${activeClass}`
+          : `tile-guru shrink-0 w-12 h-10 rounded flex items-center justify-center font-bold text-xs transition-all ${activeClass}`;
+        tile.textContent = s;
+        synthTilesStrip.appendChild(tile);
+      });
+    }
+
+    tempoSlider.addEventListener('input', (e) => {
+      tempoValue.textContent = `${e.target.value} BPM`;
+    });
+    synthVolume.addEventListener('input', (e) => {
+      volumeValue.textContent = `${e.target.value}%`;
+      soundEngine.volume = parseInt(e.target.value) / 100;
+    });
+
+    synthPresetBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const preset = btn.getAttribute('data-preset');
+        if (preset === 'GAYATRI') {
+          // Gayatri: 3 padas of 8 syllables
+          currentMeterSequence = ['L', 'G', 'L', 'G', 'L', 'L', 'G', 'G', 'L', 'G', 'L', 'G', 'L', 'L', 'G', 'G', 'L', 'G', 'L', 'G', 'L', 'L', 'G', 'G'];
+        } else if (preset === 'ANUSTUBH') {
+          // Anustubh: 4 padas of 8 syllables
+          currentMeterSequence = ['L', 'G', 'L', 'L', 'G', 'L', 'G', 'G', 'L', 'G', 'L', 'L', 'G', 'L', 'G', 'G', 'L', 'G', 'L', 'L', 'G', 'L', 'G', 'G', 'L', 'G', 'L', 'L', 'G', 'L', 'G', 'G'];
+        } else {
+          // Tristubh: 4 padas of 11 syllables
+          currentMeterSequence = ['G', 'L', 'G', 'G', 'L', 'L', 'G', 'L', 'G', 'L', 'G', 'G', 'L', 'G', 'G', 'L', 'L', 'G', 'L', 'G', 'L', 'G'];
+        }
+        renderSynthTiles();
+      });
+    });
+
+    synthPlayBtn.addEventListener('click', async () => {
+      if (isSynthPlaying) return;
+      isSynthPlaying = true;
+      synthAbortController = false;
+      synthPlayIcon.textContent = 'hourglass_top';
+      synthPlayLabel.textContent = 'Playing...';
+
+      const bpm = parseInt(tempoSlider.value);
+      await soundEngine.playSequence(currentMeterSequence, bpm, (idx, item) => {
+        if (synthAbortController) return;
+        renderSynthTiles(idx);
+        synthPlayingNote.textContent = idx >= 0 ? `Step ${idx + 1}: ${item === 'L' ? 'Laghu (1 beat / 880Hz)' : 'Guru (2 beats / 440Hz)'}` : 'Completed';
+      });
+
+      isSynthPlaying = false;
+      synthPlayIcon.textContent = 'play_arrow';
+      synthPlayLabel.textContent = 'Play Active Meter';
+      renderSynthTiles(-1);
+    });
+
+    synthStopBtn.addEventListener('click', () => {
+      synthAbortController = true;
+      isSynthPlaying = false;
+      synthPlayIcon.textContent = 'play_arrow';
+      synthPlayLabel.textContent = 'Play Active Meter';
+      synthPlayingNote.textContent = 'Stopped';
+      renderSynthTiles(-1);
+    });
+
+    renderSynthTiles();
+
+
+</script>
+
+</body></html>

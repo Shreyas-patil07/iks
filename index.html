@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Home — PingalaBit</title>
+<meta name="description" content="Explore how Acarya Pingala's Chandahsastra (c. 3rd BCE) laid the mathematical foundations of binary logic — 2,000 years before Leibniz. Interactive labs, quiz, and guided course."/>
+<link rel="canonical" href="https://pingalabit.onrender.com/"/>
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns%3D%22http%3A//www.w3.org/2000/svg%22 viewBox%3D%220 0 32 32%22%3E%3Crect width%3D%2232%22 height%3D%2232%22 rx%3D%226%22 fill%3D%22%238f4e00%22/%3E%3Ctext x%3D%2250%25%22 y%3D%2272%25%22 dominant-baseline%3D%22middle%22 text-anchor%3D%22middle%22 font-family%3D%22serif%22 font-size%3D%2220%22 font-weight%3D%22700%22 fill%3D%22%23ffffff%22%3EP%3C/text%3E%3C/svg%3E"/>
+<!-- Open Graph / Social sharing -->
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://pingalabit.onrender.com/"/>
+<meta property="og:title" content="PingalaBit — Pingala's Binary Prosody"/>
+<meta property="og:description" content="Explore how Acarya Pingala's Chandahsastra (c. 3rd BCE) laid the mathematical foundations of binary logic — 2,000 years before Leibniz. Interactive labs, quiz, and guided course."/>
+<meta property="og:site_name" content="PingalaBit"/>
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="PingalaBit — Pingala's Binary Prosody"/>
+<meta name="twitter:description" content="Explore how Acarya Pingala's Chandahsastra (c. 3rd BCE) laid the mathematical foundations of binary logic — 2,000 years before Leibniz. Interactive labs, quiz, and guided course."/>
+<!-- Google Fonts: Noto Serif, Inter, JetBrains Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&amp;family=Noto+Serif+Devanagari:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config directly from Design System -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container": "#f0eded",
+            "inverse-surface": "#303030",
+            "tertiary-fixed-dim": "#62d9cb",
+            "on-error-container": "#93000a",
+            "on-error": "#ffffff",
+            "on-secondary": "#ffffff",
+            "secondary-fixed": "#dde1ff",
+            "on-background": "#1b1c1c",
+            "tertiary-fixed": "#81f6e7",
+            "surface-variant": "#e5e2e1",
+            "surface-container-lowest": "#ffffff",
+            "primary-container": "#e8871e",
+            "on-tertiary-fixed": "#00201d",
+            "tertiary": "#006a61",
+            "primary-fixed-dim": "#ffb77a",
+            "outline-variant": "#dbc2b0",
+            "inverse-primary": "#ffb77a",
+            "primary-fixed": "#ffdcc1",
+            "secondary-container": "#b9c3ff",
+            "on-secondary-container": "#454f83",
+            "surface-container-low": "#f6f3f2",
+            "inverse-on-surface": "#f3f0ef",
+            "error": "#ba1a1a",
+            "error-container": "#ffdad6",
+            "on-primary-fixed": "#2e1500",
+            "surface-dim": "#dcd9d9",
+            "surface-bright": "#fcf9f8",
+            "outline": "#887364",
+            "tertiary-container": "#30b1a4",
+            "secondary-fixed-dim": "#b9c3ff",
+            "on-surface-variant": "#554336",
+            "on-secondary-fixed-variant": "#394377",
+            "on-tertiary": "#ffffff",
+            "surface-container-high": "#eae7e7",
+            "surface-tint": "#8f4e00",
+            "on-primary-container": "#542c00",
+            "on-tertiary-fixed-variant": "#005049",
+            "surface": "#fcf9f8",
+            "on-secondary-fixed": "#0a1649",
+            "background": "#fcf9f8",
+            "on-primary-fixed-variant": "#6c3a00",
+            "secondary": "#515b90",
+            "surface-container-highest": "#e5e2e1",
+            "on-surface": "#1b1c1c",
+            "on-tertiary-container": "#003e38",
+            "on-primary": "#ffffff",
+            "primary": "#8f4e00"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-sm": "0.5rem",
+            "gutter": "1.5rem",
+            "space-xs": "0.25rem",
+            "space-lg": "1.5rem",
+            "margin": "2rem",
+            "space-xl": "2.5rem",
+            "space-md": "1rem"
+          },
+          "fontFamily": {
+            "body-lg": ["Inter"],
+            "display-lg-mobile": ["Noto Serif"],
+            "code-lg": ["JetBrains Mono"],
+            "display-md": ["Noto Serif"],
+            "code-md": ["JetBrains Mono"],
+            "label-sm": ["JetBrains Mono"],
+            "body-sm": ["Inter"],
+            "display-md-mobile": ["Noto Serif"],
+            "headline-lg": ["Noto Serif"],
+            "headline-sm": ["Noto Serif"],
+            "display-lg": ["Noto Serif"],
+            "body-md": ["Inter"],
+            "headline-md": ["Noto Serif"],
+            "label-md": ["Inter"],
+            "code-sm": ["JetBrains Mono"]
+          },
+          "fontSize": {
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "code-lg": ["18px", { "lineHeight": "26px", "fontWeight": "500" }],
+            "display-md": ["40px", { "lineHeight": "48px", "fontWeight": "600" }],
+            "code-md": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" }],
+            "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "display-md-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "500" }],
+            "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+            "code-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    /* Manuscript Brutalism Folio Framing */
+    .manuscript-border {
+      border: 1px solid #dbc2b0;
+      box-shadow: inset 0 0 0 2px #fcf9f8, 0 1px 3px rgba(0,0,0,0.03);
+    }
+    .dark .manuscript-border {
+      border: 1px solid #303030;
+      box-shadow: inset 0 0 0 2px #1b1c1c, 0 1px 3px rgba(0,0,0,0.2);
+    }
+    /* Syllable tiles crisp rendering */
+    .tile-laghu {
+      background-color: #e8871e;
+      color: #ffffff;
+      border: 1px solid #8f4e00;
+      box-shadow: 2px 2px 0px rgba(84, 44, 0, 0.25);
+    }
+    .tile-guru {
+      background-color: #1f2a5c;
+      color: #fcf9f8;
+      border: 1px solid #0a1649;
+      box-shadow: 2px 2px 0px rgba(10, 22, 73, 0.3);
+    }
+    /* Subtle scanline palm-leaf texture hint */
+    .palm-line {
+      background-image: repeating-linear-gradient(0deg, transparent, transparent 31px, rgba(136, 115, 100, 0.08) 31px, rgba(136, 115, 100, 0.08) 32px);
+    }
+  </style>
+</head>
+
+</head>
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-primary-fixed selection:text-on-primary-fixed palm-line min-h-screen flex flex-col">
+<header class="bg-surface/90 dark:bg-surface-container-lowest/90 backdrop-blur-md docked full-width top-0 sticky z-50 border-b border-outline-variant/40 dark:border-outline/30">
+<div class="w-full max-w-7xl mx-auto px-space-lg md:px-margin flex items-center justify-between h-16">
+<a class="flex items-center gap-space-sm group" href="index.html">
+<div class="flex items-center gap-1">
+<span class="w-4 h-6 rounded bg-primary-container border border-on-primary-container/30 flex items-center justify-center text-[10px] font-code-sm font-bold text-white shadow-sm">1</span>
+<span class="w-7 h-6 rounded bg-secondary border border-on-secondary-fixed/40 flex items-center justify-center text-[10px] font-code-sm font-bold text-surface shadow-sm">0</span>
+</div>
+<span class="text-headline-sm font-headline-sm font-bold tracking-tight text-primary dark:text-primary-fixed">PingalaBit</span>
+<span class="hidden lg:inline text-label-sm font-label-sm text-outline px-1.5 py-0.5 rounded bg-surface-container-low border border-outline-variant/40">IKS-06</span>
+</a>
+<nav class="hidden md:flex items-center gap-5 text-label-md font-label-md">
+<a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary dark:border-primary-fixed pb-1" href="index.html">Home</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-primary-fixed transition-colors" href="learn.html">Explore & Solve</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-primary-fixed transition-colors" href="quiz.html">Quiz</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-primary-fixed transition-colors" href="course.html">Guided Course</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-primary-fixed transition-colors" href="about.html">About & Team</a>
+</nav>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded hover:bg-surface-container dark:hover:bg-surface-container-high transition-colors active:scale-95 text-on-surface-variant flex items-center justify-center" id="audioMuteBtn" title="Toggle Synthesizer Sound">
+<span class="material-symbols-outlined text-xl" id="audioMuteIcon">volume_up</span>
+</button>
+<button class="p-2 rounded hover:bg-surface-container dark:hover:bg-surface-container-high transition-colors active:scale-95 text-on-surface-variant flex items-center justify-center" id="themeToggleBtn" title="Toggle Light/Dark Display">
+<span class="material-symbols-outlined text-xl" id="themeToggleIcon">dark_mode</span>
+</button>
+<button class="md:hidden p-2 rounded hover:bg-surface-container text-on-surface-variant" id="mobileMenuBtn">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+</div>
+</div>
+<div class="hidden md:hidden border-t border-outline-variant/30 bg-surface px-space-lg py-space-md flex-col gap-3" id="mobileDrawer">
+<a class="py-2 text-label-md font-label-md text-primary font-bold" href="index.html">Home</a>
+<a class="py-2 text-label-md font-label-md text-on-surface-variant hover:text-primary" href="learn.html">Explore & Solve</a>
+<a class="py-2 text-label-md font-label-md text-on-surface-variant hover:text-primary" href="quiz.html">Quiz</a>
+<a class="py-2 text-label-md font-label-md text-on-surface-variant hover:text-primary" href="course.html">Guided Course</a>
+<a class="py-2 text-label-md font-label-md text-on-surface-variant hover:text-primary" href="about.html">About & Team</a>
+</div>
+</header>
+<main class="flex-grow w-full max-w-7xl mx-auto px-space-lg md:px-margin py-space-lg flex flex-col gap-space-xl">
+<section class="manuscript-border rounded bg-surface-container-lowest p-space-lg md:p-space-xl relative overflow-hidden" id="hero">
+<!-- Watermark Glyphs -->
+<div class="absolute right-4 top-2 select-none pointer-events-none opacity-5 font-headline-lg text-9xl text-primary">
+        छन्दः
+      </div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center relative z-10">
+<!-- Hero Text -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-surface-container-low border border-outline-variant text-label-sm font-label-sm text-primary">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+            Laghu (L) = 1 (1 mātrā) • Guru (G) = 0 (2 mātrā) • Row = 1 + ∑ 2ⁱ
+          </div>
+<h1 class="text-display-md-mobile md:text-display-md font-display-md text-on-background font-bold tracking-tight">
+            Two symbols. <br class="hidden sm:inline"/>Two thousand years. <br/>
+<span class="text-primary italic">One universal idea.</span>
+</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl">
+            Connecting Ācārya Piṅgala's <em class="font-semibold text-on-surface">Chandaḥśāstra</em> (c. 3rd–2nd century BCE) with modern binary mathematics, combinatorics, and computational computer science.
+          </p>
+<div class="flex flex-wrap items-center gap-space-md pt-2">
+<a class="px-5 py-2.5 rounded bg-secondary text-surface hover:bg-secondary/90 transition-all shadow-sm font-label-md text-label-md flex items-center gap-2 border border-on-secondary-fixed/30 active:scale-95" href="learn.html#playground">
+<span>Start Learning</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+<a class="px-5 py-2.5 rounded bg-surface-container-low text-on-surface hover:bg-surface-container transition-all border border-outline-variant font-label-md text-label-md flex items-center gap-2 active:scale-95" href="quiz.html">
+<span class="material-symbols-outlined text-sm">school</span>
+<span>Take the Quiz</span>
+</a>
+</div>
+</div>
+<!-- Interactive Live Hero Mini Demo -->
+<div class="lg:col-span-5 flex flex-col gap-space-md p-space-md rounded bg-surface-container-low border border-outline-variant">
+<div class="flex items-center justify-between pb-2 border-b border-outline-variant/60">
+<span class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider">Live Binary Prosody Sandbox</span>
+<span class="text-code-sm font-code-sm text-outline">Click tiles to toggle</span>
+</div>
+<!-- 4 Interactive Mini Tiles -->
+<div class="flex items-center justify-center gap-3 py-3" id="heroMiniStrip">
+<!-- Dynamically rendered or pre-rendered -->
+<button class="hero-tile tile-laghu w-12 h-14 rounded flex flex-col items-center justify-center font-code-md font-bold transition-transform active:scale-90" data-index="0" data-state="L">
+<span class="text-lg">L</span>
+<span class="text-xs opacity-80">1</span>
+</button>
+<button class="hero-tile tile-guru w-16 h-14 rounded flex flex-col items-center justify-center font-code-md font-bold transition-transform active:scale-90" data-index="1" data-state="G">
+<span class="text-lg">G</span>
+<span class="text-xs opacity-80">0</span>
+</button>
+<button class="hero-tile tile-laghu w-12 h-14 rounded flex flex-col items-center justify-center font-code-md font-bold transition-transform active:scale-90" data-index="2" data-state="L">
+<span class="text-lg">L</span>
+<span class="text-xs opacity-80">1</span>
+</button>
+<button class="hero-tile tile-laghu w-12 h-14 rounded flex flex-col items-center justify-center font-code-md font-bold transition-transform active:scale-90" data-index="3" data-state="L">
+<span class="text-lg">L</span>
+<span class="text-xs opacity-80">1</span>
+</button>
+</div>
+<!-- Realtime stats readout -->
+<div class="grid grid-cols-3 gap-2 text-center pt-2 border-t border-outline-variant/60">
+<div class="p-2 rounded bg-surface-container-lowest border border-outline-variant/50">
+<span class="block text-label-sm font-label-sm text-outline">Pattern</span>
+<span class="text-code-md font-code-md font-bold text-primary" id="heroPatternOut">L G L L</span>
+</div>
+<div class="p-2 rounded bg-surface-container-lowest border border-outline-variant/50">
+<span class="block text-label-sm font-label-sm text-outline">Binary Bits</span>
+<span class="text-code-md font-code-md font-bold text-secondary" id="heroBinaryOut">1 0 1 1</span>
+</div>
+<div class="p-2 rounded bg-surface-container-lowest border border-outline-variant/50">
+<span class="block text-label-sm font-label-sm text-outline">Pingala Row #</span>
+<span class="text-code-md font-code-md font-bold text-tertiary" id="heroRowOut">14</span>
+</div>
+</div>
+<p class="text-code-sm font-code-sm text-center text-on-surface-variant/80">
+            Formula: Row = 1 + (1·2⁰ + 0·2¹ + 1·2² + 1·2³) = <span class="font-bold text-on-surface" id="heroFormulaOut">1 + (1 + 0 + 4 + 8) = 14</span>
+</p>
+</div>
+</div>
+</section>
+
+
+<section class="flex flex-col gap-space-md" id="overview">
+<h2 class="text-headline-lg font-headline-lg font-bold text-on-surface text-center">Choose where to start</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<a href="learn.html" class="manuscript-border rounded bg-surface-container-lowest p-space-lg flex flex-col gap-2 hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-3xl text-primary">tune</span>
+<h3 class="text-headline-sm font-headline-sm font-bold">Explore &amp; Solve</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Playground, Prastāra generator, Naṣṭa/Uddiṣṭa solvers, text encoder, Meru triangle, and the rhythm synthesizer.</p>
+</a>
+<a href="quiz.html" class="manuscript-border rounded bg-surface-container-lowest p-space-lg flex flex-col gap-2 hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-3xl text-secondary">quiz</span>
+<h3 class="text-headline-sm font-headline-sm font-bold">Quiz</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">10 rigorous questions with instant feedback, scoring, and a badge.</p>
+</a>
+<a href="course.html" class="manuscript-border rounded bg-surface-container-lowest p-space-lg flex flex-col gap-2 hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-3xl text-tertiary">school</span>
+<h3 class="text-headline-sm font-headline-sm font-bold">Guided Course</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">A step-by-step learning path with progress tracking, in the style of a Cisco NetAcad module.</p>
+</a>
+<a href="about.html" class="manuscript-border rounded bg-surface-container-lowest p-space-lg flex flex-col gap-2 hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-3xl text-primary">groups</span>
+<h3 class="text-headline-sm font-headline-sm font-bold">About &amp; Team</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Pingala's timeline, then-vs-now comparison, glossary, references, and the project roster.</p>
+</a>
+</div>
+</section>
+
+</main>
+<footer class="bg-surface-container-low dark:bg-inverse-surface border-t border-outline-variant/50 dark:border-outline/30 mt-space-xl">
+<div class="w-full max-w-7xl mx-auto px-space-lg md:px-margin py-space-xl flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex flex-col items-center md:items-start gap-1">
+<div class="text-headline-md font-headline-md font-bold text-primary dark:text-primary-fixed">PingalaBit</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant dark:text-inverse-on-surface/80 text-center md:text-left">
+  © 2025 PingalaBit. IKS Assignment No. 6. Computational Prosody &amp; Binary Mathematics.
+</p>
+<span class="text-code-sm font-code-sm text-outline">Home · Explore &amp; Solve · Quiz · Guided Course · About &amp; Team</span>
+</div>
+<div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-label-sm font-label-sm">
+<a class="text-on-surface-variant dark:text-inverse-on-surface/80 hover:text-primary dark:hover:text-primary-fixed transition-colors" href="about.html#timeline">Chandaḥśāstra Sources</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface/80 hover:text-primary dark:hover:text-primary-fixed transition-colors" href="learn.html#meru">Halayudha Mṛtasañjīvinī</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface/80 hover:text-primary dark:hover:text-primary-fixed transition-colors" href="about.html#glossary">Glossary &amp; IAST</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface/80 hover:text-primary dark:hover:text-primary-fixed transition-colors" href="about.html#roster">Team Roster</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface/80 hover:text-primary dark:hover:text-primary-fixed transition-colors" href="learn.html#solvers">Algorithmic Proofs</a>
+</div>
+</div>
+</footer>
+
+<script>
+    // --- 1. Sound Synthesis Engine (Web Audio API) ---
+    class ProsodyAudioEngine {
+      constructor() {
+        this.ctx = null;
+        this.isMuted = false;
+        this.volume = 0.75;
+      }
+
+      initContext() {
+        if (!this.ctx) {
+          const AudioContext = window.AudioContext || window.webkitAudioContext;
+          if (AudioContext) {
+            this.ctx = new AudioContext();
+          }
+        }
+        if (this.ctx && this.ctx.state === 'suspended') {
+          this.ctx.resume();
+        }
+      }
+
+      // Laghu: High crisp tone (880Hz, ~80ms)
+      // Guru: Deep resonant harmonic tone (440Hz, ~240ms)
+      playTone(type = 'L', customDuration = null) {
+        if (this.isMuted) return;
+        this.initContext();
+        if (!this.ctx) return;
+
+        const now = this.ctx.currentTime;
+        const osc = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
+
+        const isLaghu = (type === 'L' || type === '1');
+        const freq = isLaghu ? 880 : 440;
+        const duration = customDuration !== null ? customDuration : (isLaghu ? 0.09 : 0.24);
+
+        osc.type = isLaghu ? 'triangle' : 'sine';
+        osc.frequency.setValueAtTime(freq, now);
+
+        gain.gain.setValueAtTime(this.volume * 0.4, now);
+        gain.gain.exponentialRampToValueAtTime(0.0001, now + duration);
+
+        osc.connect(gain);
+        gain.connect(this.ctx.destination);
+
+        osc.start(now);
+        osc.stop(now + duration);
+      }
+
+      async playSequence(sequence, bpm = 140, onStep = null) {
+        this.initContext();
+        const beatUnitSec = 60 / bpm;
+
+        for (let i = 0; i < sequence.length; i++) {
+          const item = sequence[i];
+          if (onStep) onStep(i, item);
+          const isL = (item === 'L' || item === '1');
+          const duration = isL ? (beatUnitSec * 0.6) : (beatUnitSec * 1.3);
+          this.playTone(isL ? 'L' : 'G', duration);
+          await new Promise(r => setTimeout(r, (isL ? beatUnitSec * 0.8 : beatUnitSec * 1.5) * 1000));
+        }
+        if (onStep) onStep(-1, null);
+      }
+    }
+
+    const soundEngine = new ProsodyAudioEngine();
+
+
+    // --- 2. Theme & Sound UI Toggles ---
+    const themeToggleBtn = document.getElementById('themeToggleBtn');
+    const themeToggleIcon = document.getElementById('themeToggleIcon');
+
+    themeToggleBtn.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      const isDark = document.documentElement.classList.contains('dark');
+      themeToggleIcon.textContent = isDark ? 'light_mode' : 'dark_mode';
+    });
+
+    const audioMuteBtn = document.getElementById('audioMuteBtn');
+    const audioMuteIcon = document.getElementById('audioMuteIcon');
+
+    audioMuteBtn.addEventListener('click', () => {
+      soundEngine.isMuted = !soundEngine.isMuted;
+      audioMuteIcon.textContent = soundEngine.isMuted ? 'volume_off' : 'volume_up';
+      audioMuteBtn.classList.toggle('text-error', soundEngine.isMuted);
+    });
+
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileDrawer.classList.toggle('hidden');
+      mobileDrawer.classList.toggle('flex');
+    });
+
+
+    // --- 3. Hero Mini Interactive Demo Logic ---
+    const heroMiniTiles = document.querySelectorAll('.hero-tile');
+    const heroPatternOut = document.getElementById('heroPatternOut');
+    const heroBinaryOut = document.getElementById('heroBinaryOut');
+    const heroRowOut = document.getElementById('heroRowOut');
+    const heroFormulaOut = document.getElementById('heroFormulaOut');
+
+    function updateHeroDemo() {
+      const pattern = [];
+      const bits = [];
+      let rowSum = 0;
+      const terms = [];
+
+      heroMiniTiles.forEach((tile, idx) => {
+        const state = tile.getAttribute('data-state');
+        pattern.push(state);
+        const bit = state === 'L' ? 1 : 0;
+        bits.push(bit);
+        if (bit === 1) {
+          const pVal = Math.pow(2, idx);
+          rowSum += pVal;
+          terms.push(`1·2^${idx}(=${pVal})`);
+        } else {
+          terms.push(`0·2^${idx}(=0)`);
+        }
+      });
+
+      const totalRow = 1 + rowSum;
+      heroPatternOut.textContent = pattern.join(' ');
+      heroBinaryOut.textContent = bits.join(' ');
+      heroRowOut.textContent = `${totalRow}`;
+      heroFormulaOut.textContent = `1 + (${terms.join(' + ')}) = ${totalRow}`;
+    }
+
+    heroMiniTiles.forEach(tile => {
+      tile.addEventListener('click', () => {
+        const curr = tile.getAttribute('data-state');
+        const next = curr === 'L' ? 'G' : 'L';
+        tile.setAttribute('data-state', next);
+        if (next === 'L') {
+          tile.className = 'hero-tile tile-laghu w-12 h-14 rounded flex flex-col items-center justify-center font-code-md font-bold transition-transform active:scale-90';
+          tile.innerHTML = '<span class="text-lg">L</span><span class="text-xs opacity-80">1</span>';
+          soundEngine.playTone('L');
+        } else {
+          tile.className = 'hero-tile tile-guru w-16 h-14 rounded flex flex-col items-center justify-center font-code-md font-bold transition-transform active:scale-90';
+          tile.innerHTML = '<span class="text-lg">G</span><span class="text-xs opacity-80">0</span>';
+          soundEngine.playTone('G');
+        }
+        updateHeroDemo();
+      });
+    });
+
+
+</script>
+
+</body></html>

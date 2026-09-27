@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Guided Course — PingalaBit</title>
+<meta name="description" content="A self-paced 8-module guided course connecting Pingala's Chandahsastra to modern binary mathematics, with progress tracking and a final quiz."/>
+<link rel="canonical" href="https://pingalabit.onrender.com/course.html"/>
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns%3D%22http%3A//www.w3.org/2000/svg%22 viewBox%3D%220 0 32 32%22%3E%3Crect width%3D%2232%22 height%3D%2232%22 rx%3D%226%22 fill%3D%22%238f4e00%22/%3E%3Ctext x%3D%2250%25%22 y%3D%2272%25%22 dominant-baseline%3D%22middle%22 text-anchor%3D%22middle%22 font-family%3D%22serif%22 font-size%3D%2220%22 font-weight%3D%22700%22 fill%3D%22%23ffffff%22%3EP%3C/text%3E%3C/svg%3E"/>
+<!-- Open Graph / Social sharing -->
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://pingalabit.onrender.com/course.html"/>
+<meta property="og:title" content="Guided Course — PingalaBit"/>
+<meta property="og:description" content="A self-paced 8-module guided course connecting Pingala's Chandahsastra to modern binary mathematics, with progress tracking and a final quiz."/>
+<meta property="og:site_name" content="PingalaBit"/>
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Guided Course — PingalaBit"/>
+<meta name="twitter:description" content="A self-paced 8-module guided course connecting Pingala's Chandahsastra to modern binary mathematics, with progress tracking and a final quiz."/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&amp;family=Noto+Serif+Devanagari:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container":"#f0eded","inverse-surface":"#303030","on-secondary":"#ffffff","on-background":"#1b1c1c","surface-container-lowest":"#ffffff","primary-container":"#e8871e","tertiary":"#006a61","outline-variant":"#dbc2b0","primary-fixed":"#ffdcc1","secondary-container":"#b9c3ff","on-secondary-container":"#454f83","surface-container-low":"#f6f3f2","inverse-on-surface":"#f3f0ef","error":"#ba1a1a","error-container":"#ffdad6","on-primary-fixed":"#2e1500","outline":"#887364","tertiary-container":"#30b1a4","on-surface-variant":"#554336","on-tertiary":"#ffffff","surface-container-high":"#eae7e7","on-primary-container":"#542c00","surface":"#fcf9f8","background":"#fcf9f8","secondary":"#515b90","on-surface":"#1b1c1c","on-tertiary-container":"#003e38","on-primary":"#ffffff","primary":"#8f4e00","tertiary-fixed":"#81f6e7","secondary-fixed":"#dde1ff","inverse-primary":"#ffb77a","primary-fixed-dim":"#ffb77a","surface-dim":"#dcd9d9","surface-variant":"#e5e2e1","surface-container-highest":"#e5e2e1","on-secondary-fixed-variant":"#394377"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"space-sm":"0.5rem",gutter:"1.5rem","space-xs":"0.25rem","space-lg":"1.5rem",margin:"2rem","space-xl":"2.5rem","space-md":"1rem"},fontFamily:{"body-lg":["Inter"],"code-lg":["JetBrains Mono"],"display-md":["Noto Serif"],"code-md":["JetBrains Mono"],"label-sm":["JetBrains Mono"],"body-sm":["Inter"],"display-md-mobile":["Noto Serif"],"headline-lg":["Noto Serif"],"headline-sm":["Noto Serif"],"display-lg":["Noto Serif"],"body-md":["Inter"],"headline-md":["Noto Serif"],"label-md":["Inter"],"code-sm":["JetBrains Mono"]},fontSize:{"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"code-lg":["18px",{"lineHeight":"26px","fontWeight":"500"}],"display-md":["40px",{"lineHeight":"48px","fontWeight":"600"}],"code-md":["14px",{"lineHeight":"20px","fontWeight":"500"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.08em","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"20px","fontWeight":"400"}],"display-md-mobile":["28px",{"lineHeight":"36px","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"40px","fontWeight":"600"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"500"}],"display-lg":["56px",{"lineHeight":"64px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["15px",{"lineHeight":"24px","fontWeight":"400"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"600"}],"code-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}]}}}}
+</script>
+<style>
+.manuscript-border{border:1px solid #dbc2b0;box-shadow:inset 0 0 0 2px #fcf9f8,0 1px 3px rgba(0,0,0,0.03);}
+.dark .manuscript-border{border:1px solid #303030;box-shadow:inset 0 0 0 2px #1b1c1c,0 1px 3px rgba(0,0,0,0.2);}
+.palm-line{background-image:repeating-linear-gradient(0deg,transparent,transparent 31px,rgba(136,115,100,0.08) 31px,rgba(136,115,100,0.08) 32px);}
+.c-tile-row{display:flex;gap:5px;flex-wrap:wrap;margin:.5rem 0;font-family:'JetBrains Mono',monospace;}
+.c-laghu,.c-guru{display:flex;align-items:center;justify-content:center;height:34px;border-radius:5px;color:#fff;font-weight:700;font-size:13px;cursor:default;user-select:none;}
+.c-laghu{width:34px;background:#e8871e;border:1px solid #8f4e00;}
+.c-guru{width:68px;background:#1f2a5c;border:1px solid #0a1649;}
+#pfill{transition:width .4s;}
+.cquiz-opt.correct{background-color:#d1fae5;border-color:#006a61;color:#003e38;}
+.cquiz-opt.wrong{background-color:#ffdad6;border-color:#ba1a1a;color:#93000a;}
+.tri-row{display:flex;justify-content:center;gap:6px;margin:2px 0;}
+.tri-node{background:#30b1a4;color:#fff;font-size:11px;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:600;}
+.mod-btn{width:100%;display:flex;align-items:center;gap:0.5rem;padding:0.5rem 0.75rem;border-radius:0.25rem;text-align:left;font-size:12px;line-height:16px;letter-spacing:0.05em;font-weight:600;transition:background-color 0.15s;cursor:pointer;background:none;border:none;color:inherit;}
+.mod-btn:hover{background-color:#f0eded;}
+.mod-btn.active{background-color:#8f4e00!important;color:#fff!important;font-weight:700;}
+.mod-dot{width:20px;height:20px;border-radius:50%;border:2px solid #887364;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0;color:#887364;}
+.mod-btn.done .mod-dot{background:#006a61;border-color:#006a61;color:#fff;}
+@media(max-width:768px){#courseLayout{flex-direction:column;}#sideNav{width:100%!important;flex-direction:row;overflow-x:auto;border-right:none;border-bottom:1px solid #dbc2b0;padding:.5rem;}.mod-btn{white-space:nowrap;flex-shrink:0;width:auto;}}
+</style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased palm-line min-h-screen flex flex-col">
+<header class="bg-surface/90 backdrop-blur-md top-0 sticky z-50 border-b border-outline-variant/40">
+<div class="w-full max-w-7xl mx-auto px-space-lg md:px-margin flex items-center justify-between h-16">
+  <a class="flex items-center gap-space-sm" href="index.html">
+    <div class="flex items-center gap-1">
+      <span class="w-4 h-6 rounded bg-primary-container border border-on-primary-container/30 flex items-center justify-center text-[10px] font-code-sm font-bold text-white shadow-sm">1</span>
+      <span class="w-7 h-6 rounded bg-secondary border border-on-secondary-fixed/40 flex items-center justify-center text-[10px] font-code-sm font-bold text-surface shadow-sm">0</span>
+    </div>
+    <span class="text-headline-sm font-headline-sm font-bold tracking-tight text-primary">PingalaBit</span>
+    <span class="hidden lg:inline text-label-sm font-label-sm text-outline px-1.5 py-0.5 rounded bg-surface-container-low border border-outline-variant/40">IKS-06</span>
+  </a>
+  <nav class="hidden md:flex items-center gap-5 text-label-md font-label-md">
+    <a class="text-on-surface-variant hover:text-primary transition-colors" href="index.html">Home</a>
+    <a class="text-on-surface-variant hover:text-primary transition-colors" href="learn.html">Explore &amp; Solve</a>
+    <a class="text-on-surface-variant hover:text-primary transition-colors" href="quiz.html">Quiz</a>
+    <a class="text-primary font-bold border-b-2 border-primary pb-1" href="course.html">Guided Course</a>
+    <a class="text-on-surface-variant hover:text-primary transition-colors" href="about.html">About &amp; Team</a>
+  </nav>
+  <div class="flex items-center gap-2">
+    <button class="p-2 rounded hover:bg-surface-container transition-colors active:scale-95 text-on-surface-variant flex items-center justify-center" id="themeToggleBtn" title="Toggle theme">
+      <span class="material-symbols-outlined text-xl" id="themeToggleIcon">dark_mode</span>
+    </button>
+    <button class="md:hidden p-2 rounded hover:bg-surface-container text-on-surface-variant" id="mobileMenuBtn">
+      <span class="material-symbols-outlined text-2xl">menu</span>
+    </button>
+  </div>
+</div>
+<div class="hidden md:hidden border-t border-outline-variant/30 bg-surface px-space-lg py-space-md flex-col gap-3" id="mobileDrawer">
+  <a class="py-2 text-label-md font-label-md text-on-surface-variant hover:text-primary" href="index.html">Home</a>
+  <a class="py-2 text-label-md font-label-md text-on-surface-variant hover:text-primary" href="learn.html">Explore &amp; Solve</a>
+  <a class="py-2 text-label-md font-label-md text-on-surface-variant hover:text-primary" href="quiz.html">Quiz</a>
+  <a class="py-2 text-label-md font-label-md text-primary font-bold" href="course.html">Guided Course</a>
+  <a class="py-2 text-label-md font-label-md text-on-surface-variant hover:text-primary" href="about.html">About &amp; Team</a>
+</div>
+</header>
+<div class="w-full bg-secondary text-on-secondary px-space-lg py-2 flex flex-wrap items-center gap-4">
+  <div class="flex items-center gap-2 flex-1">
+    <span class="material-symbols-outlined text-base">school</span>
+    <span class="text-label-sm font-label-sm uppercase tracking-wider opacity-80">Course Progress</span>
+  </div>
+  <div class="flex-1 min-w-[200px]">
+    <div class="h-2 bg-white/20 rounded-full overflow-hidden">
+      <div class="h-full bg-primary-container rounded-full" id="pfill" style="width:0%"></div>
+    </div>
+    <div class="text-label-sm font-label-sm opacity-80 mt-0.5" id="plabel">0 / 8 modules complete</div>
+  </div>
+</div>
+<div class="flex-grow w-full max-w-7xl mx-auto flex" id="courseLayout">
+  <nav class="w-56 flex-shrink-0 border-r border-outline-variant/40 bg-surface-container-lowest flex flex-col gap-1 py-space-md px-2" id="sideNav"></nav>
+  <main class="flex-1 px-space-lg md:px-space-xl py-space-lg" id="courseMain"></main>
+</div>
+<footer class="bg-surface-container-low border-t border-outline-variant/50 mt-space-xl">
+<div class="w-full max-w-7xl mx-auto px-space-lg md:px-margin py-space-xl flex flex-col md:flex-row items-center justify-between gap-space-md">
+  <div class="flex flex-col items-center md:items-start gap-1">
+    <div class="text-headline-md font-headline-md font-bold text-primary">PingalaBit</div>
+    <p class="text-body-sm font-body-sm text-on-surface-variant text-center md:text-left">
+      © 2025 PingalaBit. IKS Assignment No. 6. Computational Prosody &amp; Binary Mathematics.
+    </p>
+    <span class="text-code-sm font-code-sm text-outline">Home · Explore &amp; Solve · Quiz · Guided Course · About &amp; Team</span>
+  </div>
+  <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-label-sm font-label-sm">
+    <a class="text-on-surface-variant hover:text-primary transition-colors" href="about.html#timeline">Chandahśāstra Sources</a>
+    <a class="text-on-surface-variant hover:text-primary transition-colors" href="learn.html#meru">Halayudha Mṛtasañjīvinī</a>
+    <a class="text-on-surface-variant hover:text-primary transition-colors" href="about.html#glossary">Glossary &amp; IAST</a>
+    <a class="text-on-surface-variant hover:text-primary transition-colors" href="about.html#roster">Team Roster</a>
+    <a class="text-on-surface-variant hover:text-primary transition-colors" href="learn.html#solvers">Algorithmic Proofs</a>
+  </div>
+</div>
+</footer>
+<script>
+// Theme toggle
+document.getElementById('themeToggleBtn').addEventListener('click',function(){
+  document.documentElement.classList.toggle('dark');
+  document.getElementById('themeToggleIcon').textContent=document.documentElement.classList.contains('dark')?'light_mode':'dark_mode';
+});
+// Mobile nav
+document.getElementById('mobileMenuBtn').addEventListener('click',function(){
+  var d=document.getElementById('mobileDrawer');d.classList.toggle('hidden');d.classList.toggle('flex');
+});
+
+// === Core Pingala Math ===
+function nashta(row,n){var v=row-1,out='';for(var i=0;i<n;i++){out+=(v&1)?'L':'G';v>>=1;}return out;}
+function prastaraFn(n){var r=[];for(var i=1;i<=Math.pow(2,n);i++)r.push(nashta(i,n));return r;}
+function uddishta(p){var s=0;for(var i=0;i<p.length;i++)if(p[i]==='L')s+=Math.pow(2,i);return s+1;}
+function sankhya(n){return Math.pow(2,n);}
+function comb(n,k){var r=1;for(var i=0;i<k;i++)r=r*(n-i)/(i+1);return Math.round(r);}
+function fibWays(n){if(n<=1)return 1;var a=1,b=1;for(var i=2;i<=n;i++){var t=a+b;a=b;b=t;}return b;}
+function tileRow(pattern){
+  return '<div class="c-tile-row">'+Array.from(pattern).map(function(c){
+    return c==='L'?'<div class="c-laghu" title="Laghu L=1">L</div>':'<div class="c-guru" title="Guru G=0">G</div>';
+  }).join('')+'</div>';
+}
+
+// === Progress ===
+var MODULES=[
+  {id:'welcome',title:'1. Welcome'},
+  {id:'basics',title:'2. Laghu & Guru'},
+  {id:'prastara',title:'3. Prastara Lab'},
+  {id:'uddishta',title:'4. Uddishta Solver'},
+  {id:'nashta',title:'5. Nashta Solver'},
+  {id:'meru',title:'6. Meru & Fibonacci'},
+  {id:'thennow',title:'7. Then vs Now'},
+  {id:'quiz',title:'8. Final Quiz'}
+];
+var progress={};try{progress=JSON.parse(localStorage.getItem('pingalabit_progress')||'{}');}catch(e){}
+var quizState=null;try{quizState=JSON.parse(localStorage.getItem('pingalabit_quiz')||'null');}catch(e){}
+function saveProgress(){try{localStorage.setItem('pingalabit_progress',JSON.stringify(progress));}catch(e){}}
+function markDone(id){progress[id]=true;saveProgress();renderNav();updateProgressBar();}
+function updateProgressBar(){
+  var done=MODULES.filter(function(m){return progress[m.id];}).length;
+  document.getElementById('pfill').style.width=(done/MODULES.length*100)+'%';
+  document.getElementById('plabel').textContent=done+' / '+MODULES.length+' modules complete';
+}
+var currentId=MODULES[0].id;
+
+function renderNav(){
+  var nav=document.getElementById('sideNav');
+  nav.innerHTML=MODULES.map(function(m){
+    var done=progress[m.id],active=m.id===currentId;
+    return '<button data-id="'+m.id+'" class="mod-btn'+(active?' active':'')+(done?' done':'')+'">'
+      +'<span class="mod-dot">'+(done?'&#10003;':'')+'</span>'
+      +'<span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">'+m.title+'</span>'
+      +'</button>';
+  }).join('');
+  nav.querySelectorAll('.mod-btn').forEach(function(b){
+    b.addEventListener('click',function(){goTo(b.dataset.id);});
+  });
+}
+function goTo(id){currentId=id;renderNav();renderMain();window.scrollTo({top:0,behavior:'smooth'});}
+
+function footerNav(id){
+  var idx=MODULES.findIndex(function(m){return m.id===id;});
+  var prev=MODULES[idx-1],next=MODULES[idx+1];
+  var btnStyle='padding:.5rem 1rem;border-radius:.25rem;cursor:pointer;font-size:12px;font-weight:600;border:none;';
+  return '<div style="display:flex;justify-content:space-between;margin-top:1.5rem;padding-top:1rem;border-top:1px solid #dbc2b0;">'
+    +(prev?'<button onclick="goTo(\''+prev.id+'\')" style="'+btnStyle+'background:#f6f3f2;border:1px solid #dbc2b0;color:#1b1c1c;">&larr; '+prev.title+'</button>':'<span></span>')
+    +(next?'<button onclick="goTo(\''+next.id+'\')" style="'+btnStyle+'background:#8f4e00;color:#fff;">'+next.title+' &rarr;</button>':'<span></span>')
+    +'</div>';
+}
+
+var CQUIZ=[
+  {q:'Did Pingala invent binary numbers?',options:{a:'Yes, exactly',b:'Binary-like logic ~2000 yrs before Leibniz',c:'A total myth',d:'Yes, using 0 and 1'},answer:'b',explain:'He never wrote 0/1 literally but his place-value rules match binary logic.'},
+  {q:'What does Laghu map to?',options:{a:'0',b:'2',c:'1',d:'10'},answer:'c',explain:'Laghu=1, Guru=0.'},
+  {q:'What does Prastara do?',options:{a:'Finds pattern from row',b:'Lists all 2^n patterns',c:'Counts totals only',d:'Converts text'},answer:'b',explain:'Prastara enumerates every permutation.'},
+  {q:'Uddishta(GLL)=?',options:{a:'6',b:'7',c:'8',d:'3'},answer:'b',explain:'0+2+4=6, +1=7.'},
+  {q:'Nashta(6,3)=?',options:{a:'LGL',b:'GLL',c:'LLG',d:'GGL'},answer:'a',explain:'5=101 -> L,G,L.'},
+  {q:'Sankhya(4)=?',options:{a:'8',b:'12',c:'16',d:'24'},answer:'c',explain:'2^4=16.'},
+  {q:'Meru-prastara is the same as?',options:{a:'Fibonacci spiral',b:"Pascal's Triangle",c:"Euclid's algorithm",d:'Venn diagram'},answer:'b',explain:"Halayudha's pyramid predates Pascal by centuries."},
+  {q:'Ways to fill 5 beats (L=1,G=2)?',options:{a:'5',b:'8',c:'13',d:'3'},answer:'b',explain:'Fibonacci:1,2,3,5,8.'},
+  {q:'Who described Fibonacci before 1202?',options:{a:'Aryabhata',b:'Virahanka, Gopala, Hemacandra',c:'Panini',d:'Bhaskara'},answer:'b',explain:'All three predate Fibonacci.'},
+  {q:'Best phrasing of Pingala contribution?',options:{a:'Invented computer',b:'Invented binary like Leibniz',c:'Binary-like logic ~2000 yrs before Leibniz',d:'No connection'},answer:'c',explain:'Honest, source-backed framing.'}
+];
+
+function cardWrap(content,id){
+  return '<div class="manuscript-border rounded bg-surface-container-lowest p-space-lg" style="max-width:760px;">'+content+'</div>'+footerNav(id);
+}
+
+function sectionLabel(n,text){
+  return '<span class="text-label-sm font-label-sm text-primary" style="text-transform:uppercase;letter-spacing:.08em;">Module '+n+'</span><h2 class="text-headline-lg font-headline-lg text-on-background" style="margin:.25rem 0 .75rem;">'+text+'</h2>';
+}
+
+var RENDERERS={
+  welcome:function(){
+    return cardWrap(
+      sectionLabel(1,'Two symbols. Two thousand years. One idea.')
+      +'<p class="text-body-md font-body-md text-on-surface-variant" style="margin-bottom:.75rem;">Pingala (c. 3rd-2nd century BCE) wrote the <strong>Chandahsastra</strong>, the oldest surviving text on Sanskrit poetic metre. He worked with two syllables: <strong>Laghu</strong> (short, 1 matra) and <strong>Guru</strong> (long, 2 matras). His systematic procedures are mathematically identical to binary place-value logic, 2,000 years before Leibniz.</p>'
+      +'<div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:.75rem;"><span style="padding:.25rem .75rem;border-radius:99px;background:#ffdcc1;color:#2e1500;font-size:12px;font-weight:600;">8 Modules</span><span style="padding:.25rem .75rem;border-radius:99px;background:#b9c3ff;color:#0a1649;font-size:12px;font-weight:600;">Hands-on Labs</span><span style="padding:.25rem .75rem;border-radius:99px;background:#81f6e7;color:#003e38;font-size:12px;font-weight:600;">Final Quiz + Badge</span></div>'
+      +'<p class="text-body-sm font-body-sm text-on-surface-variant">Work through each module, try the labs, then take the quiz. Progress is saved in your browser.</p>'
+    ,'welcome');
+  },
+  basics:function(){
+    return cardWrap(
+      sectionLabel(2,'Laghu &amp; Guru: a two-symbol code')
+      +'<div style="overflow-x:auto;border:1px solid #dbc2b0;border-radius:.25rem;"><table style="width:100%;border-collapse:collapse;font-size:13px;"><thead><tr style="background:#eae7e7;font-size:11px;text-transform:uppercase;letter-spacing:.08em;border-bottom:1px solid #dbc2b0;"><th style="padding:.75rem;text-align:left;">Syllable</th><th style="padding:.75rem;text-align:left;">Name</th><th style="padding:.75rem;text-align:left;">Length</th><th style="padding:.75rem;text-align:left;">Symbol</th><th style="padding:.75rem;text-align:left;">Binary</th></tr></thead><tbody><tr style="border-bottom:1px solid rgba(219,194,176,.4);"><td style="padding:.75rem;">Short/light</td><td style="padding:.75rem;font-weight:700;color:#8f4e00;">Laghu</td><td style="padding:.75rem;">1 matra</td><td style="padding:.75rem;font-family:\'JetBrains Mono\',monospace;">L (\u0964)</td><td style="padding:.75rem;font-family:\'JetBrains Mono\',monospace;color:#8f4e00;font-weight:700;">1</td></tr><tr><td style="padding:.75rem;">Long/heavy</td><td style="padding:.75rem;font-weight:700;color:#515b90;">Guru</td><td style="padding:.75rem;">2 matras</td><td style="padding:.75rem;font-family:\'JetBrains Mono\',monospace;">G (\u093d)</td><td style="padding:.75rem;font-family:\'JetBrains Mono\',monospace;color:#515b90;font-weight:700;">0</td></tr></tbody></table></div>'
+      +'<p class="text-body-md text-on-surface-variant" style="margin:.75rem 0;">Every metre is a sequence like <code style="font-family:\'JetBrains Mono\',monospace;background:#f6f3f2;padding:0 .25rem;border-radius:.125rem;">LGG</code> or <code style="font-family:\'JetBrains Mono\',monospace;background:#f6f3f2;padding:0 .25rem;border-radius:.125rem;">GLLG</code> \u2014 a two-symbol code.</p>'
+      +tileRow('GLLG')
+      +'<p style="font-size:13px;background:#f6f3f2;padding:.75rem;border-radius:.25rem;border:1px solid rgba(219,194,176,.5);color:#554336;margin:.75rem 0;"><strong>Note:</strong> Pingala never wrote literal 0/1 \u2014 the binary reading is a modern interpretation (Van Nooten 1993).</p>'
+      +'<h3 class="text-headline-sm font-headline-sm font-bold" style="margin:.75rem 0 .5rem;">The Six Pratyayas</h3>'
+      +'<div style="overflow-x:auto;border:1px solid #dbc2b0;border-radius:.25rem;"><table style="width:100%;border-collapse:collapse;font-size:13px;"><thead><tr style="background:#eae7e7;font-size:11px;text-transform:uppercase;border-bottom:1px solid #dbc2b0;"><th style="padding:.75rem;text-align:left;">Method</th><th style="padding:.75rem;text-align:left;">Does</th><th style="padding:.75rem;text-align:left;">Modern CS</th></tr></thead><tbody><tr style="border-bottom:1px solid rgba(219,194,176,.4);"><td style="padding:.75rem;color:#8f4e00;font-weight:700;">Prastara</td><td style="padding:.75rem;">Lists all 2^n patterns</td><td style="padding:.75rem;font-family:\'JetBrains Mono\',monospace;">n-bit enumeration</td></tr><tr style="border-bottom:1px solid rgba(219,194,176,.4);"><td style="padding:.75rem;color:#8f4e00;font-weight:700;">Nashta</td><td style="padding:.75rem;">Row to pattern</td><td style="padding:.75rem;font-family:\'JetBrains Mono\',monospace;">Decimal to binary</td></tr><tr style="border-bottom:1px solid rgba(219,194,176,.4);"><td style="padding:.75rem;color:#8f4e00;font-weight:700;">Uddishta</td><td style="padding:.75rem;">Pattern to row</td><td style="padding:.75rem;font-family:\'JetBrains Mono\',monospace;">Binary to decimal</td></tr><tr style="border-bottom:1px solid rgba(219,194,176,.4);"><td style="padding:.75rem;color:#8f4e00;font-weight:700;">Laghukriya</td><td style="padding:.75rem;">Count with k Laghus</td><td style="padding:.75rem;font-family:\'JetBrains Mono\',monospace;">nCk</td></tr><tr style="border-bottom:1px solid rgba(219,194,176,.4);"><td style="padding:.75rem;color:#8f4e00;font-weight:700;">Sankhya</td><td style="padding:.75rem;">Total patterns</td><td style="padding:.75rem;font-family:\'JetBrains Mono\',monospace;">2^n</td></tr><tr><td style="padding:.75rem;color:#8f4e00;font-weight:700;">Adhvan</td><td style="padding:.75rem;">Space to write all</td><td style="padding:.75rem;font-family:\'JetBrains Mono\',monospace;">Memory estimation</td></tr></tbody></table></div>'
+    ,'basics');
+  },
+  prastara:function(){
+    return cardWrap(
+      sectionLabel('3 \u2014 Lab','Prastara Generator')
+      +'<p class="text-body-md text-on-surface-variant" style="margin-bottom:.75rem;">Pick n and see all 2^n patterns in Pingala\'s order \u2014 first syllable changes fastest (binary counting).</p>'
+      +'<div style="display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;margin-bottom:.75rem;">'
+      +'<label style="font-size:12px;font-weight:600;color:#554336;letter-spacing:.05em;">n = <select id="nSel" style="margin-left:.5rem;background:#fff;border:1px solid #dbc2b0;border-radius:.25rem;padding:.375rem .5rem;font-family:\'JetBrains Mono\',monospace;font-size:13px;"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></label>'
+      +'<button onclick="genPrastara()" style="padding:.375rem 1rem;border-radius:.25rem;background:#515b90;color:#fff;border:none;cursor:pointer;font-size:12px;font-weight:600;">Generate</button>'
+      +'</div>'
+      +'<div id="prastaraOut" style="background:#f6f3f2;border:1px solid #dbc2b0;border-radius:.25rem;padding:1rem;min-height:60px;font-size:13px;color:#554336;">Click Generate to see all patterns.</div>'
+    ,'prastara');
+  },
+  uddishta:function(){
+    return cardWrap(
+      sectionLabel('4 \u2014 Lab','Uddishta Solver \u2014 Pattern to Row')
+      +'<p class="text-body-md text-on-surface-variant" style="margin-bottom:.75rem;"><strong>Rule:</strong> Give positions values 1,2,4,8\u2026 Sum every L, then add 1.</p>'
+      +'<div style="display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;margin-bottom:.75rem;">'
+      +'<label style="font-size:12px;font-weight:600;color:#554336;">Pattern: <input id="udInput" value="GLL" maxlength="8" style="margin-left:.5rem;background:#fff;border:1px solid #dbc2b0;border-radius:.25rem;padding:.375rem .5rem;font-family:\'JetBrains Mono\',monospace;width:100px;text-transform:uppercase;" placeholder="e.g. GLL"/></label>'
+      +'<button onclick="solveUddishta()" style="padding:.375rem 1rem;border-radius:.25rem;background:#515b90;color:#fff;border:none;cursor:pointer;font-size:12px;font-weight:600;">Solve</button>'
+      +'</div>'
+      +'<div id="udOut" style="background:#f6f3f2;border:1px solid #dbc2b0;border-radius:.25rem;padding:1rem;min-height:60px;font-size:13px;color:#554336;">Enter an L/G pattern, then click Solve.</div>'
+    ,'uddishta');
+  },
+  nashta:function(){
+    return cardWrap(
+      sectionLabel('5 \u2014 Lab','Nashta Solver \u2014 Row to Pattern')
+      +'<p class="text-body-md text-on-surface-variant" style="margin-bottom:.75rem;"><strong>Rule:</strong> Subtract 1 from row, convert to binary, read from LSB (first syllable).</p>'
+      +'<div style="display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;margin-bottom:.75rem;">'
+      +'<label style="font-size:12px;font-weight:600;color:#554336;">Row: <input id="nsRow" type="number" value="6" min="1" style="margin-left:.5rem;background:#fff;border:1px solid #dbc2b0;border-radius:.25rem;padding:.375rem .5rem;font-family:\'JetBrains Mono\',monospace;width:70px;"/></label>'
+      +'<label style="font-size:12px;font-weight:600;color:#554336;">n: <input id="nsN" type="number" value="3" min="1" max="8" style="margin-left:.5rem;background:#fff;border:1px solid #dbc2b0;border-radius:.25rem;padding:.375rem .5rem;font-family:\'JetBrains Mono\',monospace;width:60px;"/></label>'
+      +'<button onclick="solveNashta()" style="padding:.375rem 1rem;border-radius:.25rem;background:#515b90;color:#fff;border:none;cursor:pointer;font-size:12px;font-weight:600;">Solve</button>'
+      +'</div>'
+      +'<div id="nsOut" style="background:#f6f3f2;border:1px solid #dbc2b0;border-radius:.25rem;padding:1rem;min-height:60px;font-size:13px;color:#554336;">Enter row and n, then click Solve.</div>'
+    ,'nashta');
+  },
+  meru:function(){
+    var rows=8,tri=[];
+    for(var i=0;i<rows;i++){var row=[];for(var j=0;j<=i;j++)row.push(comb(i,j));tri.push(row);}
+    var triHtml=tri.map(function(row){return '<div class="tri-row">'+row.map(function(v){return '<div class="tri-node">'+v+'</div>';}).join('')+'</div>';}).join('');
+    var fibs=[];for(var k=1;k<=10;k++)fibs.push(fibWays(k));
+    return cardWrap(
+      sectionLabel(6,'Meru-prastara &amp; Fibonacci')
+      +'<p class="text-body-md text-on-surface-variant" style="margin-bottom:.75rem;">Halayudha\'s 10th-century commentary described this triangle 600+ years before Pascal.</p>'
+      +'<div style="padding:1rem;background:#f6f3f2;border:1px solid #dbc2b0;border-radius:.25rem;overflow-x:auto;margin-bottom:.75rem;">'+triHtml+'</div>'
+      +'<h3 class="text-headline-sm font-headline-sm font-bold" style="margin:.75rem 0 .5rem;">Matra-vrtta and Fibonacci</h3>'
+      +'<p class="text-body-md text-on-surface-variant">With L=1 beat and G=2 beats, ways to fill n beats: <strong style="font-family:\'JetBrains Mono\',monospace;color:#8f4e00;">'+fibs.join(', ')+'&#8230;</strong> \u2014 the Fibonacci sequence, known to Virahanka, Gopala, and Hemacandra centuries before Fibonacci (1202 CE).</p>'
+    ,'meru');
+  },
+  thennow:function(){
+    return cardWrap(
+      sectionLabel(7,'Then vs Now')
+      +'<div style="overflow-x:auto;border:1px solid #dbc2b0;border-radius:.25rem;"><table style="width:100%;border-collapse:collapse;font-size:13px;"><thead><tr style="background:#eae7e7;font-size:11px;text-transform:uppercase;border-bottom:1px solid #dbc2b0;"><th style="padding:.75rem;text-align:left;">Feature</th><th style="padding:.75rem;text-align:left;color:#8f4e00;">Pingala System</th><th style="padding:.75rem;text-align:left;color:#515b90;">Modern Binary</th></tr></thead><tbody><tr style="border-bottom:1px solid rgba(219,194,176,.4);"><td style="padding:.75rem;font-weight:700;">Symbols</td><td style="padding:.75rem;font-family:\'JetBrains Mono\',monospace;color:#8f4e00;">Laghu/Guru</td><td style="padding:.75rem;font-family:\'JetBrains Mono\',monospace;color:#515b90;">1/0</td></tr><tr style="border-bottom:1px solid rgba(219,194,176,.4);"><td style="padding:.75rem;font-weight:700;">Purpose</td><td style="padding:.75rem;">Poetry metre taxonomy</td><td style="padding:.75rem;">Data &amp; computation</td></tr><tr style="border-bottom:1px solid rgba(219,194,176,.4);"><td style="padding:.75rem;font-weight:700;">Place value</td><td style="padding:.75rem;font-family:\'JetBrains Mono\',monospace;">1,2,4,8\u2026</td><td style="padding:.75rem;font-family:\'JetBrains Mono\',monospace;">Powers of 2</td></tr><tr style="border-bottom:1px solid rgba(219,194,176,.4);"><td style="padding:.75rem;font-weight:700;">Total count</td><td style="padding:.75rem;font-family:\'JetBrains Mono\',monospace;color:#8f4e00;">2^n</td><td style="padding:.75rem;font-family:\'JetBrains Mono\',monospace;color:#515b90;">2^n</td></tr><tr><td style="padding:.75rem;font-weight:700;">Medium</td><td style="padding:.75rem;">Sutra verses, oral</td><td style="padding:.75rem;">Electrical on/off, transistors</td></tr></tbody></table></div>'
+      +'<h3 class="text-headline-sm font-headline-sm font-bold" style="margin:.75rem 0 .5rem;">Historical Timeline</h3>'
+      +'<div style="display:flex;flex-direction:column;gap:.5rem;font-size:13px;color:#554336;">'
+      +'<div style="display:flex;gap:.75rem;"><span style="color:#8f4e00;font-weight:700;min-width:80px;">c.3rd BCE</span><span>Pingala writes the Chandahsastra</span></div>'
+      +'<div style="display:flex;gap:.75rem;"><span style="color:#8f4e00;font-weight:700;min-width:80px;">10th CE</span><span>Halayudha diagrams Meru-prastara (Pascal\'s Triangle)</span></div>'
+      +'<div style="display:flex;gap:.75rem;"><span style="color:#515b90;font-weight:700;min-width:80px;">1703</span><span>Leibniz formalizes binary arithmetic</span></div>'
+      +'<div style="display:flex;gap:.75rem;"><span style="color:#515b90;font-weight:700;min-width:80px;">1854</span><span>Boole: True (1) / False (0) algebra</span></div>'
+      +'<div style="display:flex;gap:.75rem;"><span style="color:#006a61;font-weight:700;min-width:80px;">1937</span><span>Shannon proves switches execute Boolean logic</span></div>'
+      +'<div style="display:flex;gap:.75rem;"><span style="color:#006a61;font-weight:700;min-width:80px;">Present</span><span>Billions of transistors, quantum qubits \u2014 same combinatorial structure</span></div>'
+      +'</div>'
+      +'<p style="font-size:13px;background:#f6f3f2;padding:.75rem;border-radius:.25rem;border:1px solid rgba(219,194,176,.5);color:#554336;margin:.75rem 0;"><strong>Honest framing:</strong> Pingala worked on poetry, not computers. Fair: \u201cused binary-like logic ~2000 yrs before Leibniz\u201d.</p>'
+    ,'thennow');
+  },
+  quiz:function(){
+    if(!quizState)quizState={i:0,score:0,done:false};
+    if(quizState.done){
+      var pct=Math.round(100*quizState.score/CQUIZ.length);
+      var badge=pct>=90?'\ud83e\udd47 Gold \u2014 Chandas Master!':pct>=70?'\ud83e\udd48 Silver \u2014 Prastara Pro!':pct>=50?'\ud83e\udd49 Bronze \u2014 Binary Beginner!':'\ud83d\udcda Keep practising!';
+      return '<div class="manuscript-border rounded bg-surface-container-lowest p-space-xl" style="max-width:500px;text-align:center;">'
+        +'<span class="material-symbols-outlined" style="font-size:3rem;color:#8f4e00;">verified</span>'
+        +'<h2 class="text-headline-lg font-headline-lg" style="margin:.5rem 0;">Quiz Complete!</h2>'
+        +'<p style="font-size:24px;font-weight:700;color:#515b90;margin:.5rem 0;">'+quizState.score+' / '+CQUIZ.length+' ('+pct+'%)</p>'
+        +'<div style="padding:.5rem 1rem;border-radius:.25rem;background:#ffdcc1;color:#2e1500;font-weight:700;margin:.5rem 0;display:inline-block;">'+badge+'</div>'
+        +'<br><button onclick="restartCQuiz()" style="margin-top:.75rem;padding:.5rem 1.5rem;border-radius:.25rem;background:#8f4e00;color:#fff;border:none;cursor:pointer;font-weight:600;">Retake Quiz</button>'
+        +'</div>'+footerNav('quiz');
+    }
+    var q=CQUIZ[quizState.i];
+    return '<div class="manuscript-border rounded bg-surface-container-lowest p-space-lg" style="max-width:700px;">'
+      +'<span class="text-label-sm font-label-sm text-primary" style="text-transform:uppercase;letter-spacing:.08em;">Module 8 \u2014 Final Quiz</span>'
+      +'<div style="display:flex;align-items:center;justify-content:space-between;margin:.25rem 0 .75rem;">'
+      +'<h2 class="text-headline-md font-headline-md">Question '+(quizState.i+1)+' of '+CQUIZ.length+'</h2>'
+      +'<span style="font-family:\'JetBrains Mono\',monospace;font-size:12px;background:#f6f3f2;padding:.25rem .5rem;border-radius:.25rem;border:1px solid #dbc2b0;font-weight:700;">Score: '+quizState.score+'</span>'
+      +'</div>'
+      +'<p style="font-size:15px;line-height:24px;font-weight:500;margin-bottom:1rem;">'+q.q+'</p>'
+      +'<div id="cquizOpts" style="display:flex;flex-direction:column;gap:.5rem;">'+Object.entries(q.options).map(function(e){return '<button class="cquiz-opt" data-k="'+e[0]+'" onclick="answerCQuiz(\''+e[0]+'\')" style="text-align:left;padding:.75rem 1rem;border-radius:.25rem;border:1px solid #dbc2b0;background:#f6f3f2;cursor:pointer;font-size:13px;transition:border-color .15s;">'+e[1]+'</button>';}).join('')+'</div>'
+      +'<div id="cquizExplain" style="display:none;padding:.75rem;background:#f6f3f2;border:1px solid #dbc2b0;border-radius:.25rem;margin-top:.5rem;font-size:13px;"></div>'
+      +'<div id="cquizNextWrap"></div>'
+      +'</div>'+footerNav('quiz');
+  }
+};
+
+function renderMain(){document.getElementById('courseMain').innerHTML=RENDERERS[currentId]();if(currentId!=='quiz')markDone(currentId);}
+
+function genPrastara(){
+  var n=parseInt(document.getElementById('nSel').value);
+  var rows=prastaraFn(n);
+  document.getElementById('prastaraOut').innerHTML=
+    '<p style="font-weight:700;color:#1b1c1c;margin-bottom:.5rem;">Sankhya(n='+n+') = '+sankhya(n)+' total patterns</p>'
+    +'<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:.25rem;">'+rows.map(function(p,i){return '<div style="padding:.5rem;background:#fff;border:1px solid #dbc2b0;border-radius:.25rem;font-family:\'JetBrains Mono\',monospace;font-size:12px;"><span style="color:#887364;font-size:11px;">Row '+(i+1)+':</span> <span style="font-weight:700;color:#8f4e00;">'+p+'</span></div>';}).join('')+'</div>';
+}
+function solveUddishta(){
+  var p=document.getElementById('udInput').value.trim().toUpperCase();
+  var out=document.getElementById('udOut');
+  if(!p||Array.from(p).some(function(c){return c!=='L'&&c!=='G';})){out.innerHTML='<span style="color:#ba1a1a;font-weight:700;">Only L and G allowed.</span>';return;}
+  var row=uddishta(p);
+  var steps=Array.from(p).map(function(c,i){return c==='L'?'pos'+(i+1)+'(='+Math.pow(2,i)+')':'pos'+(i+1)+'(=0)';}).join(' + ');
+  out.innerHTML=tileRow(p)+'<p style="font-family:\'JetBrains Mono\',monospace;font-size:12px;color:#1b1c1c;margin-top:.5rem;">'+steps+' + 1 = <strong style="color:#8f4e00;">Row '+row+'</strong></p>';
+}
+function solveNashta(){
+  var row=parseInt(document.getElementById('nsRow').value),n=parseInt(document.getElementById('nsN').value);
+  var out=document.getElementById('nsOut');
+  if(n<1||n>8||row<1||row>Math.pow(2,n)){out.innerHTML='<span style="color:#ba1a1a;font-weight:700;">Row must be 1-'+Math.pow(2,n)+' for n='+n+'.</span>';return;}
+  var pattern=nashta(row,n);
+  out.innerHTML='<p style="font-family:\'JetBrains Mono\',monospace;font-size:12px;color:#1b1c1c;margin-bottom:.5rem;">Row '+row+' - 1 = '+(row-1)+' => binary => read from LSB</p>'
+    +tileRow(pattern)+'<p style="font-family:\'JetBrains Mono\',monospace;font-size:12px;color:#1b1c1c;margin-top:.5rem;">Pattern: <strong style="color:#8f4e00;">'+pattern+'</strong></p>';
+}
+function answerCQuiz(k){
+  var q=CQUIZ[quizState.i];
+  document.querySelectorAll('.cquiz-opt').forEach(function(b){
+    b.disabled=true;
+    if(b.dataset.k===q.answer)b.classList.add('correct');
+    else if(b.dataset.k===k)b.classList.add('wrong');
+  });
+  if(k===q.answer)quizState.score++;
+  var exp=document.getElementById('cquizExplain');
+  exp.style.display='block';
+  exp.innerHTML=(k===q.answer?'<span style="color:#006a61;font-weight:700;">\u2705 Correct! </span>':'<span style="color:#ba1a1a;font-weight:700;">\u274c Not quite. </span>')+q.explain;
+  document.getElementById('cquizNextWrap').innerHTML='<button onclick="nextCQuiz()" style="margin-top:.5rem;padding:.5rem 1.25rem;border-radius:.25rem;background:#8f4e00;color:#fff;border:none;cursor:pointer;font-weight:600;">'+(quizState.i+1<CQUIZ.length?'Next Question \u2192':'See Results')+'</button>';
+  try{localStorage.setItem('pingalabit_quiz',JSON.stringify(quizState));}catch(e){}
+}
+function nextCQuiz(){
+  quizState.i++;
+  if(quizState.i>=CQUIZ.length){quizState.done=true;markDone('quiz');}
+  try{localStorage.setItem('pingalabit_quiz',JSON.stringify(quizState));}catch(e){}
+  renderMain();
+}
+function restartCQuiz(){
+  quizState={i:0,score:0,done:false};
+  try{localStorage.setItem('pingalabit_quiz',JSON.stringify(quizState));}catch(e){}
+  renderMain();
+}
+
+renderNav();renderMain();updateProgressBar();
+</script>
+</body>
+</html>
