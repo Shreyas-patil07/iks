@@ -4,7 +4,7 @@
 
 A fully static, five-page interactive website built for IKS Assignment No. 6 — exploring how the *Chandaḥśāstra* (c. 3rd–2nd century BCE) laid the mathematical foundations of binary logic roughly 2,000 years before Leibniz.
 
-🌐 **Live:** https://pingalabit.onrender.com
+🌐 **Live:** https://pingalabit.vercel.app
 
 ---
 
@@ -44,23 +44,24 @@ A fully static, five-page interactive website built for IKS Assignment No. 6 —
 
 ---
 
-## Deployment (Render)
+## Deployment (Vercel)
 
-This repo is pre-configured for **Render Static Sites** via [`render.yaml`](./render.yaml).
+This repo is pre-configured for **Vercel** via [`vercel.json`](./vercel.json).
 
 ### Deploy in 3 steps
 
-1. Fork or connect this repo on [render.com](https://render.com)
-2. **New → Static Site** → select this repo
-3. Render auto-reads `render.yaml` — click **Deploy**
+1. Go to [vercel.com](https://vercel.com) and click **Add New → Project**
+2. Import this GitHub repository (`https://github.com/Shreyas-patil07/iks`)
+3. Keep default settings (Framework Preset: **Other**, Root Directory: `./`) and click **Deploy**
 
-No build command. Publish directory is `.` (repo root).
+No build command or output directory is needed.
 
-### What `render.yaml` configures
+### What `vercel.json` configures
 
-- Security headers: `X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy`
-- Smart cache: HTML files get `no-cache` (always fresh), other assets get 1h cache
-- Clean URL routes: `/learn` → `learn.html`, `/quiz` → `quiz.html`, etc.
+- **Clean URLs:** Routes `/learn`, `/quiz`, `/course`, `/about` work automatically without `.html` extension
+- **Security headers:** `X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy`
+- **Smart cache:** HTML pages revalidate immediately; static resources, sitemap, and robots are cached efficiently
+- **Custom 404:** Automatic branded 404 error page handling
 
 ---
 
